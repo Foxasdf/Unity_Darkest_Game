@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: ddaccdc8b68e4a6eacfa8aa91ecc2686
+timeCreated: 1658113433
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Demos/Demo3_RecyclableGameObjectPool/Scripts/DemoHitText.cs
+  uploadId: 515194

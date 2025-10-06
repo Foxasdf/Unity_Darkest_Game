@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: deea0620d7d5c83458ea9ca356ad5239
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Themes/Base16TomorrowDark.cs
+  uploadId: 720310

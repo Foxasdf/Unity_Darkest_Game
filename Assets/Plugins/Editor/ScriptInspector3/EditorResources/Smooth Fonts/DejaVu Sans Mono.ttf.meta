@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 9714d8baeb8cc6745981b27436bd07a1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 12
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DejaVu Sans Mono
+  fontNames:
+  - DejaVu Sans Mono Smooth
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13cb619672fa24a8181c94d4c891329c, type: 3}
+  - {fileID: 12800000, guid: 3e9fc979480c815418fae055374df3ed, type: 3}
+  - {fileID: 12800000, guid: c2bd47fa93fb94740b403fcb08f2b086, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/EditorResources/Smooth Fonts/DejaVu
+    Sans Mono.ttf
+  uploadId: 720310

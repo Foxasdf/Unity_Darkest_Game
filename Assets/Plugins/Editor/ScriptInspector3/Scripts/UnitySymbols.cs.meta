@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 720d77d290f0ac445a82822055639b9d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+  uploadId: 720310

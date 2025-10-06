@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 205e68e9f30e2084b896f182214714da
+timeCreated: 1436734723
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/FindReplaceWindow.cs
+  uploadId: 720310

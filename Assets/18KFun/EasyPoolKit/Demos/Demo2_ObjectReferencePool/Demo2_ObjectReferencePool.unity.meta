@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c30134477e4a4934fbdcdf7fce4d31f2
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Demos/Demo2_ObjectReferencePool/Demo2_ObjectReferencePool.unity
+  uploadId: 515194

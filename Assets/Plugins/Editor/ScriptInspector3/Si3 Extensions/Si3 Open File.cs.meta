@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d93a253587b5c0c43b6ba16473c5235f
+timeCreated: 1437590964
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Si3 Extensions/Si3 Open File.cs
+  uploadId: 720310

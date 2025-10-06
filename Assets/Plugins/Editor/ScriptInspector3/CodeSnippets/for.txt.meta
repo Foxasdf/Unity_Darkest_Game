@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 0901c05981b598d4d9b4236b13cc2c90
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/CodeSnippets/for.txt
+  uploadId: 720310

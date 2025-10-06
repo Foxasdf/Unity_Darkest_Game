@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d713a159e7f0e4aae8fbaed8f5c5e787
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Scripts/Common/ObjectPoolKit.cs
+  uploadId: 515194

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2fa2fa1056e51c4db89fb0594811d58
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Themes/MDBrown.cs
+  uploadId: 720310

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0ba023e335c5f4c30bcce8e4fd5051f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Scripts/Unity/SimpleGOPool/SimpleGOPoolKit.cs
+  uploadId: 515194

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6c8ee70b8865e104ea3b479a4a878078
+timeCreated: 1445791188
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Si3 Extensions/Si3 UnityEventDrawer.cs
+  uploadId: 720310

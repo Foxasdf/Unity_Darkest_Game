@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: fa727d0d597033648813d8e89797a432
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 12
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: JetBrains Mono
+  fontNames:
+  - JetBrains Mono Hinted
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12518cc07e4af174aa6a0567dbf6b328, type: 3}
+  - {fileID: 12800000, guid: e36cb1f1cc86f724a9a08abb74c122c0, type: 3}
+  - {fileID: 12800000, guid: 8b3e76b6a2140874c87cf61022a90cf2, type: 3}
+  - {fileID: 12800000, guid: 51b18fbc453c7c84195fbe36da8f5c02, type: 3}
+  - {fileID: 12800000, guid: f6064b1dc1b972d4a8e583defd84c9c3, type: 3}
+  - {fileID: 12800000, guid: f7e1e76d06378eb4c8848e7e6029c170, type: 3}
+  - {fileID: 12800000, guid: 4fd820cd95316d548a77639cd7d1c175, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/EditorResources/Fonts/JetBrains
+    Mono.ttf
+  uploadId: 720310

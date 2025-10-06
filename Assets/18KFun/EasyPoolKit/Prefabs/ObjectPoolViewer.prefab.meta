@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 41364f36b6992104488770b1d09e9fd8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Prefabs/ObjectPoolViewer.prefab
+  uploadId: 515194

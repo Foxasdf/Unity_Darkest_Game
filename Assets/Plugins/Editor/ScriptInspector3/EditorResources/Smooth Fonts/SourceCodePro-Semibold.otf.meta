@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 62ab3d81a332e044aa16ef6cd2a25951
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 12
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Source Code Pro
+  fontNames:
+  - SourceCodePro-Semibold Smooth
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 02400354d5ec1b04f852f07c24feebcf, type: 3}
+  - {fileID: 12800000, guid: 70ea775584919ac40ab0e6876bcad647, type: 3}
+  - {fileID: 12800000, guid: ad6ef108a66aa7a439bf72424a56b8d3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/EditorResources/Smooth Fonts/SourceCodePro-Semibold.otf
+  uploadId: 720310

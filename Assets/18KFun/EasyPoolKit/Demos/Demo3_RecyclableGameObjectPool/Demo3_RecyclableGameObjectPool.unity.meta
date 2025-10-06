@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5bd936b42ce413441af8346fb418226c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Demos/Demo3_RecyclableGameObjectPool/Demo3_RecyclableGameObjectPool.unity
+  uploadId: 515194

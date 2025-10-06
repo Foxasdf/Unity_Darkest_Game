@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 29ca70304f75e9d43935762e2e67d3c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Scripts/Unity/RecyclableGOPool/RecyclableGOPoolKit.cs
+  uploadId: 515194

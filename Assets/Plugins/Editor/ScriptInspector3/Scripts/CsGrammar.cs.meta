@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9b88e62ce5513c64a89fda1be3e623ac
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/CsGrammar.cs
+  uploadId: 720310

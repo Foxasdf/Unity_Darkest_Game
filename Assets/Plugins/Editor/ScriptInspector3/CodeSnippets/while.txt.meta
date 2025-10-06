@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 2688ea3f46bd08845862af371dcee77b
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/CodeSnippets/while.txt
+  uploadId: 720310

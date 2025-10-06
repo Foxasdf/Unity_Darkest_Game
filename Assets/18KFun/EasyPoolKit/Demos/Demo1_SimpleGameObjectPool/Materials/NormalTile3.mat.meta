@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: feca3d4b3c02cc149bc529f06b2c401a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228388
+  packageName: Easy Pool Kit - Easiest Pool Manager for objects and Game Objects
+  packageVersion: 1.0
+  assetPath: Assets/18KFun/EasyPoolKit/Demos/Demo1_SimpleGameObjectPool/Materials/NormalTile3.mat
+  uploadId: 515194

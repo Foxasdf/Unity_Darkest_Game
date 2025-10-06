@@ -1,0 +1,3 @@
+$ValidAsTypeMember$
+[SerializeField]
+private $end$;

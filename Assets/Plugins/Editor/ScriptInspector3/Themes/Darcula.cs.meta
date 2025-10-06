@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 53f1b6719f4b2e941bf33767f41f0792
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/Themes/Darcula.cs
+  uploadId: 720310

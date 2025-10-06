@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 533b19d5b8d3a40429e459de79875319
+TextScriptImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 3535
+  packageName: Script Inspector 3
+  packageVersion: 3.1.11
+  assetPath: Assets/Plugins/Editor/ScriptInspector3/_readme.txt
+  uploadId: 720310
