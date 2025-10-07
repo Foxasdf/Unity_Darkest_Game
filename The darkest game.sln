@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeTai.TrueShadow", "LeTai.TrueShadow.csproj", "{5CD86B34-EB94-17C5-123D-F763B95D0309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeTai.TrueShadow.Editor", "LeTai.TrueShadow.Editor.csproj", "{40DC11F6-25F2-459F-6131-2245BB5EC728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{1790655F-C8EE-7B53-2472-6233DECAF648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.flipbookgames.scriptinspector3", "com.flipbookgames.scriptinspector3.csproj", "{6C8F4964-196E-7DCA-5027-E7C496E72BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{FBC66497-F0CF-3FF4-A061-3EC5535071E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeTai.TrueShadow.Demo", "LeTai.TrueShadow.Demo.csproj", "{7E9628E9-D92A-00FF-3659-AD7A58EA4F9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CD86B34-EB94-17C5-123D-F763B95D0309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD86B34-EB94-17C5-123D-F763B95D0309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD86B34-EB94-17C5-123D-F763B95D0309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD86B34-EB94-17C5-123D-F763B95D0309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DC11F6-25F2-459F-6131-2245BB5EC728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DC11F6-25F2-459F-6131-2245BB5EC728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DC11F6-25F2-459F-6131-2245BB5EC728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DC11F6-25F2-459F-6131-2245BB5EC728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1790655F-C8EE-7B53-2472-6233DECAF648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1790655F-C8EE-7B53-2472-6233DECAF648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1790655F-C8EE-7B53-2472-6233DECAF648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1790655F-C8EE-7B53-2472-6233DECAF648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8F4964-196E-7DCA-5027-E7C496E72BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8F4964-196E-7DCA-5027-E7C496E72BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8F4964-196E-7DCA-5027-E7C496E72BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8F4964-196E-7DCA-5027-E7C496E72BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC66497-F0CF-3FF4-A061-3EC5535071E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC66497-F0CF-3FF4-A061-3EC5535071E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC66497-F0CF-3FF4-A061-3EC5535071E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC66497-F0CF-3FF4-A061-3EC5535071E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9628E9-D92A-00FF-3659-AD7A58EA4F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9628E9-D92A-00FF-3659-AD7A58EA4F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9628E9-D92A-00FF-3659-AD7A58EA4F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9628E9-D92A-00FF-3659-AD7A58EA4F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
