@@ -132,6 +132,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Third Party\Lucid Editor\License.txt" />
