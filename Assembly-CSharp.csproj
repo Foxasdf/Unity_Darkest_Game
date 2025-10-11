@@ -137,6 +137,7 @@
     <None Include="Assets\Cainos\Third Party\Lucid Editor\License.txt" />
     <None Include="Assets\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />
     <None Include="Assets\Art Assets\Pixel Art Platformer - Village Props v2.3.0\Changelog.txt" />
+    <None Include="Assets\Art Assets\Steven01\Read me.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

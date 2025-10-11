@@ -253,7 +253,7 @@ MonoBehaviour:
   flashlight: {fileID: 482923803}
   toggleKey: 102
   maxDistance: 15
-  rotationOffset: 0
+  rotationOffset: -90
   smoothSpeed: 15
   useSmoothing: 1
   flashlightSprite: {fileID: 0}
@@ -681,7 +681,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
+  FollowOffset: {x: 0, y: 0, z: -17.96}
 --- !u!114 &901345417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,7 +734,7 @@ Transform:
   m_GameObject: {fileID: 901345415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -7.959999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,7 +971,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1094,6 +1094,7 @@ Transform:
   m_Children:
   - {fileID: 545143151}
   - {fileID: 482923802}
+  - {fileID: 2114615845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409380055
@@ -1109,15 +1110,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   moveSpeed: 7
-  runMultiplier: 1.5
-  jumpForce: 10
-  jumpHoldGravityMultiplier: 3
-  jumpLowGravityMultiplier: 0.5
-  coyoteTimeDuration: 0.15
-  groundCheck: {fileID: 1587034028}
+  acceleration: 50
+  deceleration: 50
+  velPower: 0.9
+  jumpForce: 14
+  jumpCutMultiplier: 0.5
+  coyoteTime: 0.1
+  jumpBufferTime: 0.05
+  gravityScale: 3
+  fallGravityMultiplier: 3
+  maxFallSpeed: 20
+  groundCheckPoint: {fileID: 2114615845}
+  groundCheckSize: {x: 0.52, y: 0.37}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
+  airMultiplier: 0.8
+  maxAirJumps: 0
 --- !u!1 &1587034025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,9 +1138,9 @@ GameObject:
   - component: {fileID: 1587034028}
   - component: {fileID: 1587034027}
   - component: {fileID: 1587034026}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1254,6 +1263,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2114615844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114615845}
+  m_Layer: 0
+  m_Name: Ground Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2114615845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114615844}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1409380054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
