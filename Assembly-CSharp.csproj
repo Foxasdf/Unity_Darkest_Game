@@ -103,6 +103,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IRecyclable.cs" />
+    <Compile Include="Assets\Scripts\Enemy_mov1.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\DemoSoundObject.cs" />
     <Compile Include="Assets\Scripts\FlashlightController.cs" />
