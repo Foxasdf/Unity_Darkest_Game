@@ -1232,6 +1232,12 @@ MonoBehaviour:
   leftPoint: {fileID: 2105286402}
   rightPoint: {fileID: 921925186}
   moveSpeed: 3
+  chaseSpeed: 6
+  detectionRangeX: 15
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  showDetectionRange: 1
   knockbackForce: 24.55
 --- !u!70 &1566664903
 CapsuleCollider2D:

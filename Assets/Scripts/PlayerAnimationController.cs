@@ -21,6 +21,8 @@ public class PlayerAnimationController : MonoBehaviour
 	// Current animation state tracking
 	private int currentStateHash = 0;
 	private bool hasFlashlight = false;
+	private bool wasGrounded = true;
+	private bool jumpAnimationComplete = false;
     
 	void Awake()
 	{
@@ -48,6 +50,13 @@ public class PlayerAnimationController : MonoBehaviour
 		// Check flashlight state
 		hasFlashlight = flashlightController != null && flashlightController.IsFlashlightOn();
         
+		// Detect landing
+		if (!wasGrounded && playerMovement.IsGrounded)
+		{
+			// Player just landed
+			jumpAnimationComplete = false;
+		}
+        
 		// Determine which animation to play
 		int targetStateHash = DetermineAnimationState();
         
@@ -56,7 +65,34 @@ public class PlayerAnimationController : MonoBehaviour
 		{
 			PlayAnimation(targetStateHash);
 			currentStateHash = targetStateHash;
+			
+			// Reset jump animation flag when starting a jump
+			if (targetStateHash == JumpHash || targetStateHash == JumpFlashlightHash)
+			{
+				jumpAnimationComplete = false;
+			}
 		}
+		// If we're in a jump state, check if animation is complete
+		else if ((currentStateHash == JumpHash || currentStateHash == JumpFlashlightHash) 
+			&& !jumpAnimationComplete)
+		{
+			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			
+			// Check if animation has reached near the end (95% complete)
+			if (stateInfo.normalizedTime >= 0.95f)
+			{
+				jumpAnimationComplete = true;
+				// Pause the animator to hold on last frame
+				animator.speed = 0f;
+			}
+		}
+		// Resume animator speed when we're not in jump or animation is complete
+		else if (animator.speed == 0f && (currentStateHash != JumpHash && currentStateHash != JumpFlashlightHash))
+		{
+			animator.speed = 1f;
+		}
+        
+		wasGrounded = playerMovement.IsGrounded;
 	}
     
 	int DetermineAnimationState()
@@ -67,6 +103,12 @@ public class PlayerAnimationController : MonoBehaviour
 		if (!playerMovement.IsGrounded)
 		{
 			return hasFlashlight ? JumpFlashlightHash : JumpHash;
+		}
+        
+		// When landing, resume normal animation speed
+		if (animator.speed == 0f)
+		{
+			animator.speed = 1f;
 		}
         
 		// Check if running
@@ -81,6 +123,12 @@ public class PlayerAnimationController : MonoBehaviour
     
 	void PlayAnimation(int stateHash)
 	{
+		// Ensure animator speed is normal when starting new animation
+		if (stateHash != JumpHash && stateHash != JumpFlashlightHash)
+		{
+			animator.speed = 1f;
+		}
+		
 		// Play the animation with crossfade for smooth transitions
 		animator.CrossFade(stateHash, 0.1f, 0);
 	}
@@ -88,6 +136,7 @@ public class PlayerAnimationController : MonoBehaviour
 	// Optional: Public methods for external control
 	public void ForceIdleAnimation()
 	{
+		animator.speed = 1f;
 		int stateHash = hasFlashlight ? IdleFlashlightHash : IdleHash;
 		PlayAnimation(stateHash);
 		currentStateHash = stateHash;
