@@ -19,6 +19,10 @@ public class FlashlightController : MonoBehaviour
 	[Header("Visual Feedback")]
 	[SerializeField] private SpriteRenderer flashlightSprite;
 	[SerializeField] private bool showDebugRay = true;
+	
+	[Header("Detection Settings")]
+	[SerializeField] private LayerMask detectionLayers;
+	[SerializeField] private float coneAngle = 30f; // Cone angle for spot light detection
     
 	private Camera mainCam;
 	private bool isFlashlightOn = false;
@@ -99,6 +103,41 @@ public class FlashlightController : MonoBehaviour
 		transform.rotation = Quaternion.Euler(0, 0, currentAngle);
 	}
 	
+	// Check if flashlight is pointing at a specific target
+	public bool IsPointingAt(Transform target)
+	{
+		if (!isFlashlightOn || target == null)
+			return false;
+		
+		// Calculate direction to target
+		Vector2 directionToTarget = (target.position - transform.position).normalized;
+		
+		// Get flashlight direction (transform.up for spot lights)
+		Vector2 flashlightDir = GetFlashlightDirection();
+		
+		// Calculate angle between flashlight and target
+		float angleToTarget = Vector2.Angle(flashlightDir, directionToTarget);
+		
+		// Check if target is within cone angle
+		if (angleToTarget > coneAngle / 2f)
+			return false;
+		
+		// Check distance
+		float distanceToTarget = Vector2.Distance(transform.position, target.position);
+		if (distanceToTarget > maxDistance)
+			return false;
+		
+		// Raycast to check if there's a direct line of sight
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToTarget, maxDistance, detectionLayers);
+		
+		if (hit.collider != null && hit.transform == target)
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
 	void OnDrawGizmosSelected()
 	{
 		// Visual debug in editor - draws a line showing where the flashlight is pointing
@@ -107,6 +146,18 @@ public class FlashlightController : MonoBehaviour
 			Gizmos.color = isFlashlightOn ? Color.yellow : Color.gray;
 			// Use transform.up for spot lights since they point upward
 			Gizmos.DrawRay(transform.position, transform.up * maxDistance);
+			
+			// Draw cone edges
+			if (isFlashlightOn)
+			{
+				Vector2 dir = transform.up;
+				Vector2 leftEdge = Quaternion.Euler(0, 0, -coneAngle / 2f) * dir;
+				Vector2 rightEdge = Quaternion.Euler(0, 0, coneAngle / 2f) * dir;
+				
+				Gizmos.color = new Color(1f, 1f, 0f, 0.3f);
+				Gizmos.DrawRay(transform.position, leftEdge * maxDistance);
+				Gizmos.DrawRay(transform.position, rightEdge * maxDistance);
+			}
 			
 			// Draw line to mouse for debugging
 			Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);

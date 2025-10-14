@@ -111,8 +111,10 @@ public class PlayerAnimationController : MonoBehaviour
 			animator.speed = 1f;
 		}
         
-		// Check if running
-		if (playerMovement.IsMoving)
+		// Check if player is providing movement input (not just moving from platform)
+		bool hasMovementInput = Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f;
+		
+		if (hasMovementInput)
 		{
 			return hasFlashlight ? RunFlashlightHash : RunHash;
 		}

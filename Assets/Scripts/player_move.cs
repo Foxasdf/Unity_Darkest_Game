@@ -51,9 +51,9 @@ public class PlayerMovement2D : MonoBehaviour
 
 	// Optional: For animations
 	public bool IsFacingRight { get; private set; } = true;
-	public bool IsMoving => Mathf.Abs(rb.velocity.x) > 0.01f;
+	public bool IsMoving => Mathf.Abs(rb.linearVelocity.x) > 0.01f;
 	public bool IsGrounded => isGrounded;
-	public float VerticalVelocity => rb.velocity.y;
+	public float VerticalVelocity => rb.linearVelocity.y;
 
 	private void Awake()
 	{
@@ -128,9 +128,9 @@ public class PlayerMovement2D : MonoBehaviour
 		ApplyGravityModifiers();
 
 		// Clamp fall speed
-		if (rb.velocity.y < -maxFallSpeed)
+		if (rb.linearVelocity.y < -maxFallSpeed)
 		{
-			rb.velocity = new Vector2(rb.velocity.x, -maxFallSpeed);
+			rb.linearVelocity = new Vector2(rb.linearVelocity.x, -maxFallSpeed);
 		}
 	}
 
@@ -143,7 +143,7 @@ public class PlayerMovement2D : MonoBehaviour
 		targetSpeed += platformVelocity.x;
 
 		// Calculate speed difference
-		float speedDiff = targetSpeed - rb.velocity.x;
+		float speedDiff = targetSpeed - rb.linearVelocity.x;
 
 		// Determine acceleration rate
 		float accelRate = (Mathf.Abs(horizontalInput) > 0.01f) ? acceleration : deceleration;
@@ -172,9 +172,9 @@ public class PlayerMovement2D : MonoBehaviour
 		}
 
 		// Variable jump height - reduce velocity when jump button is released
-		if (jumpInputReleased && rb.velocity.y > 0 && isJumping)
+		if (jumpInputReleased && rb.linearVelocity.y > 0 && isJumping)
 		{
-			rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutMultiplier);
+			rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
 			isJumping = false;
 		}
 	}
@@ -188,7 +188,7 @@ public class PlayerMovement2D : MonoBehaviour
 		}
 
 		// Apply jump velocity
-		rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+		rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
 		// Reset counters
 		jumpBufferCounter = 0f;
@@ -200,12 +200,12 @@ public class PlayerMovement2D : MonoBehaviour
 	private void ApplyGravityModifiers()
 	{
 		// Apply different gravity when falling for better game feel
-		if (rb.velocity.y < 0)
+		if (rb.linearVelocity.y < 0)
 		{
 			rb.gravityScale = gravityScale * fallGravityMultiplier;
 			isJumping = false;
 		}
-		else if (rb.velocity.y > 0 && jumpInputReleased)
+		else if (rb.linearVelocity.y > 0 && jumpInputReleased)
 		{
 			rb.gravityScale = gravityScale * fallGravityMultiplier;
 		}
