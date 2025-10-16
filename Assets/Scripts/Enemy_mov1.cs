@@ -18,6 +18,10 @@ public class SimpleEnemyPatrol : MonoBehaviour
 	[Header("Player Detection")]
 	[SerializeField] private float knockbackForce = 10f;
     
+	// NEW: Reference to Animator
+	[Header("Animation")]
+	[SerializeField] private Animator animator;
+
 	private Rigidbody2D rb;
 	private CapsuleCollider2D col;
 	private bool movingRight = true;
@@ -31,21 +35,27 @@ public class SimpleEnemyPatrol : MonoBehaviour
 	private Transform playerTransform;
 	private FlashlightController flashlight;
     
+	// Animation parameter name (optional: use string const for safety)
+	private static readonly string MOVE_ANIM_PARAM = "move";
+
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<CapsuleCollider2D>();
+
+		// NEW: Cache Animator (could be null if not assigned)
+		animator = GetComponent<Animator>(); // Often on same object as SpriteRenderer
 	}
     
 	private void Start()
 	{
 		// Configure Rigidbody2D
-		rb.bodyType = RigidbodyType2D.Dynamic; // Changed to Dynamic for gravity
+		rb.bodyType = RigidbodyType2D.Dynamic;
 		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 		rb.freezeRotation = true;
-		rb.gravityScale = 3f; // Match player's gravity
-		rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Only freeze rotation
-		rb.interpolation = RigidbodyInterpolation2D.Interpolate; // Smooth movement
+		rb.gravityScale = 3f;
+		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         
 		// Validate patrol points
 		if (leftPoint == null || rightPoint == null)
@@ -94,22 +104,21 @@ public class SimpleEnemyPatrol : MonoBehaviour
 		{
 			Patrol();
 		}
+
+		// NEW: Update animation based on movement
+		UpdateAnimation();
 	}
 	
 	private void CheckForFlashlight()
 	{
-		// Don't chase if no player or flashlight found
 		if (playerTransform == null || flashlight == null)
 			return;
 		
-		// Check if flashlight is actually on (not just key pressed)
 		if (!flashlight.IsFlashlightOn())
 			return;
 		
-		// Calculate horizontal distance to player
 		float horizontalDistance = Mathf.Abs(playerTransform.position.x - transform.position.x);
 		
-		// If player is within horizontal detection range, start chasing
 		if (horizontalDistance <= detectionRangeX)
 		{
 			isChasing = true;
@@ -118,23 +127,20 @@ public class SimpleEnemyPatrol : MonoBehaviour
     
 	private void Patrol()
 	{
-		// Calculate movement direction
 		float direction = movingRight ? 1f : -1f;
-        
-		// Calculate target velocity
 		float targetVelocityX = direction * moveSpeed;
 		
-		// Smoothly change velocity (keeps Y velocity for gravity)
 		rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
         
-		// Check if we've reached patrol boundaries (using stored world positions)
 		if (movingRight && transform.position.x >= rightBoundary)
 		{
 			movingRight = false;
+			FlipSprite(); // Optional: flip sprite when turning
 		}
 		else if (!movingRight && transform.position.x <= leftBoundary)
 		{
 			movingRight = true;
+			FlipSprite(); // Optional: flip sprite when turning
 		}
 	}
 	
@@ -142,44 +148,56 @@ public class SimpleEnemyPatrol : MonoBehaviour
 	{
 		if (playerTransform == null)
 		{
-			// If player is lost, go back to patrol
 			isChasing = false;
 			return;
 		}
 		
-		// Calculate direction to player (only on X axis)
 		float directionToPlayer = Mathf.Sign(playerTransform.position.x - transform.position.x);
-		
-		// Calculate target velocity
 		float targetVelocityX = directionToPlayer * chaseSpeed;
 		
-		// Smoothly change velocity (keeps Y velocity for gravity)
 		rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
+	}
+
+	// NEW: Update animation parameter
+	private void UpdateAnimation()
+	{
+		// If velocity is non-zero on X, then enemy is moving
+		bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+		// Set the 'move' parameter in Animator
+		if (animator != null)
+		{
+			animator.SetBool(MOVE_ANIM_PARAM, isMoving);
+		}
+	}
+
+	// Optional: Flip sprite when changing direction
+	private void FlipSprite()
+	{
+		if (animator == null) return;
+
+		// Scale x to -1 to flip, back to 1 to un-flip
+		Vector3 scale = transform.localScale;
+		scale.x *= -1; // Reverse X scale
+		transform.localScale = scale;
 	}
     
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		// Check if we hit the player
 		if (collision.gameObject.CompareTag("Player"))
 		{
-			// Try to get player's Rigidbody2D for knockback
 			Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
             
 			if (playerRb != null)
 			{
-				// Calculate knockback direction (away from enemy)
 				Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
-                
-				// Apply knockback
 				playerRb.linearVelocity = new Vector2(knockbackDir.x * knockbackForce, knockbackForce * 0.5f);
 			}
 		}
 	}
     
-	// Visualize patrol points and detection range in editor
 	private void OnDrawGizmosSelected()
 	{
-		// Draw patrol path
 		if (leftPoint != null && rightPoint != null)
 		{
 			Gizmos.color = Color.yellow;
@@ -189,27 +207,21 @@ public class SimpleEnemyPatrol : MonoBehaviour
 			Gizmos.DrawWireSphere(leftPoint.position, 0.3f);
 			Gizmos.DrawWireSphere(rightPoint.position, 0.3f);
 			
-			// Show direction
 			Gizmos.color = Color.cyan;
 			Vector3 center = (leftPoint.position + rightPoint.position) / 2f;
 			Gizmos.DrawWireSphere(center, 0.2f);
 		}
 		
-		// Draw detection range
 		if (showDetectionRange)
 		{
 			Gizmos.color = isChasing ? Color.red : Color.blue;
 			Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.3f);
 			
-			// Draw horizontal detection range
 			Vector3 leftRange = transform.position + Vector3.left * detectionRangeX;
 			Vector3 rightRange = transform.position + Vector3.right * detectionRangeX;
 			
-			// Draw vertical lines to show range
 			Gizmos.DrawLine(leftRange + Vector3.up * 5f, leftRange + Vector3.down * 5f);
 			Gizmos.DrawLine(rightRange + Vector3.up * 5f, rightRange + Vector3.down * 5f);
-			
-			// Draw horizontal line
 			Gizmos.DrawLine(leftRange, rightRange);
 		}
 	}

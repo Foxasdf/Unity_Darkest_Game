@@ -1,0 +1,2210 @@
+fileFormatVersion: 2
+guid: 4cd917e375e972943a225018c71828fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8842669692922490239
+    second: DreamSuckerSpriteSheet_0
+  - first:
+      213: -7265112276054075439
+    second: DreamSuckerSpriteSheet_1
+  - first:
+      213: -8064932578825194949
+    second: DreamSuckerSpriteSheet_2
+  - first:
+      213: 4153613745286988272
+    second: DreamSuckerSpriteSheet_3
+  - first:
+      213: 3704284781103427160
+    second: DreamSuckerSpriteSheet_4
+  - first:
+      213: 23444391437863204
+    second: DreamSuckerSpriteSheet_5
+  - first:
+      213: 4111729166681496203
+    second: DreamSuckerSpriteSheet_6
+  - first:
+      213: 6822720021462836938
+    second: DreamSuckerSpriteSheet_7
+  - first:
+      213: -4350206396429816961
+    second: DreamSuckerSpriteSheet_8
+  - first:
+      213: 1775971063808487910
+    second: DreamSuckerSpriteSheet_9
+  - first:
+      213: -2691561041651011677
+    second: DreamSuckerSpriteSheet_10
+  - first:
+      213: -7008181920579037555
+    second: DreamSuckerSpriteSheet_11
+  - first:
+      213: -2608095372644291432
+    second: DreamSuckerSpriteSheet_12
+  - first:
+      213: -847429144856089797
+    second: DreamSuckerSpriteSheet_13
+  - first:
+      213: 5184602916271558459
+    second: DreamSuckerSpriteSheet_14
+  - first:
+      213: -9119322113012724758
+    second: DreamSuckerSpriteSheet_15
+  - first:
+      213: 950240223180975392
+    second: DreamSuckerSpriteSheet_16
+  - first:
+      213: -7935023602652477517
+    second: DreamSuckerSpriteSheet_17
+  - first:
+      213: -6038341469268866922
+    second: DreamSuckerSpriteSheet_18
+  - first:
+      213: -8595760729887431549
+    second: DreamSuckerSpriteSheet_19
+  - first:
+      213: 8759428365040671342
+    second: DreamSuckerSpriteSheet_20
+  - first:
+      213: -6636138331235008883
+    second: DreamSuckerSpriteSheet_21
+  - first:
+      213: 6606454116391972964
+    second: DreamSuckerSpriteSheet_22
+  - first:
+      213: 1617568040617665287
+    second: DreamSuckerSpriteSheet_23
+  - first:
+      213: -6746798686163110368
+    second: DreamSuckerSpriteSheet_24
+  - first:
+      213: 6053300591054328238
+    second: DreamSuckerSpriteSheet_25
+  - first:
+      213: -2833378758647713927
+    second: DreamSuckerSpriteSheet_26
+  - first:
+      213: -1703330086509182187
+    second: DreamSuckerSpriteSheet_27
+  - first:
+      213: 1020048116566680932
+    second: DreamSuckerSpriteSheet_28
+  - first:
+      213: -5071911581046773720
+    second: DreamSuckerSpriteSheet_29
+  - first:
+      213: 4822380671144503994
+    second: DreamSuckerSpriteSheet_30
+  - first:
+      213: -2587831183708143509
+    second: DreamSuckerSpriteSheet_31
+  - first:
+      213: -956352354541295753
+    second: DreamSuckerSpriteSheet_32
+  - first:
+      213: 8150953811874322158
+    second: DreamSuckerSpriteSheet_33
+  - first:
+      213: -8771024263244078680
+    second: DreamSuckerSpriteSheet_34
+  - first:
+      213: 7321403906831815419
+    second: DreamSuckerSpriteSheet_35
+  - first:
+      213: -8092914000323132639
+    second: DreamSuckerSpriteSheet_36
+  - first:
+      213: 9104965088718724671
+    second: DreamSuckerSpriteSheet_37
+  - first:
+      213: 636985151963946824
+    second: DreamSuckerSpriteSheet_38
+  - first:
+      213: 5527430345119613774
+    second: DreamSuckerSpriteSheet_39
+  - first:
+      213: -4440509925094498049
+    second: DreamSuckerSpriteSheet_40
+  - first:
+      213: -7545750662281678267
+    second: DreamSuckerSpriteSheet_41
+  - first:
+      213: -4972367306369048871
+    second: DreamSuckerSpriteSheet_42
+  - first:
+      213: 5691883307172758799
+    second: DreamSuckerSpriteSheet_43
+  - first:
+      213: -7139561958871004842
+    second: DreamSuckerSpriteSheet_44
+  - first:
+      213: -4794723048582995812
+    second: DreamSuckerSpriteSheet_45
+  - first:
+      213: -2796780487030520365
+    second: DreamSuckerSpriteSheet_46
+  - first:
+      213: 5438491213521436541
+    second: DreamSuckerSpriteSheet_47
+  - first:
+      213: 4735044466101171769
+    second: DreamSuckerSpriteSheet_48
+  - first:
+      213: 3754499153194504801
+    second: DreamSuckerSpriteSheet_49
+  - first:
+      213: 6342205304488321779
+    second: DreamSuckerSpriteSheet_50
+  - first:
+      213: 5474147640235836090
+    second: DreamSuckerSpriteSheet_51
+  - first:
+      213: -2612964590972257297
+    second: DreamSuckerSpriteSheet_52
+  - first:
+      213: 7094823668402604489
+    second: DreamSuckerSpriteSheet_53
+  - first:
+      213: 8864119275587766219
+    second: DreamSuckerSpriteSheet_54
+  - first:
+      213: 7542647262707589907
+    second: DreamSuckerSpriteSheet_55
+  - first:
+      213: -8600301723119552985
+    second: DreamSuckerSpriteSheet_56
+  - first:
+      213: -3758620822522993257
+    second: DreamSuckerSpriteSheet_57
+  - first:
+      213: 271969864689299443
+    second: DreamSuckerSpriteSheet_58
+  - first:
+      213: 8471506269982474618
+    second: DreamSuckerSpriteSheet_59
+  - first:
+      213: -4419473680774340101
+    second: DreamSuckerSpriteSheet_60
+  - first:
+      213: -6250904104068174463
+    second: DreamSuckerSpriteSheet_61
+  - first:
+      213: -4058709097899131085
+    second: DreamSuckerSpriteSheet_62
+  - first:
+      213: -2036242129320464502
+    second: DreamSuckerSpriteSheet_63
+  - first:
+      213: 221266469526089145
+    second: DreamSuckerSpriteSheet_64
+  - first:
+      213: -4196245485000118955
+    second: DreamSuckerSpriteSheet_65
+  - first:
+      213: 8162359453321718992
+    second: DreamSuckerSpriteSheet_66
+  - first:
+      213: 6295537179795298808
+    second: DreamSuckerSpriteSheet_67
+  - first:
+      213: -7737023357631179503
+    second: DreamSuckerSpriteSheet_68
+  - first:
+      213: -7456764645437873605
+    second: DreamSuckerSpriteSheet_69
+  - first:
+      213: -699529446681377623
+    second: DreamSuckerSpriteSheet_70
+  - first:
+      213: -2663663680559140571
+    second: DreamSuckerSpriteSheet_71
+  - first:
+      213: 6560202648254263391
+    second: DreamSuckerSpriteSheet_72
+  - first:
+      213: -7501378477348543111
+    second: DreamSuckerSpriteSheet_73
+  - first:
+      213: -3943357866506490175
+    second: DreamSuckerSpriteSheet_74
+  - first:
+      213: 2664893881135988248
+    second: DreamSuckerSpriteSheet_75
+  - first:
+      213: 3576977330446409740
+    second: DreamSuckerSpriteSheet_76
+  - first:
+      213: -747888519404493387
+    second: DreamSuckerSpriteSheet_77
+  - first:
+      213: 8107632629192952262
+    second: DreamSuckerSpriteSheet_78
+  - first:
+      213: -8440857595553882692
+    second: DreamSuckerSpriteSheet_79
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 46
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7de1c83c3977ba70800000000000000
+      internalID: 8842669692922490239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7977c80e22d2b90800000000000000
+      internalID: -7265112276054075439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3236a5ac8a931090800000000000000
+      internalID: -8064932578825194949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1c20ec1b994a930800000000000000
+      internalID: 4153613745286988272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e2e8cd163486330800000000000000
+      internalID: 3704284781103427160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42901afbc8a435000800000000000000
+      internalID: 23444391437863204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ad9a864ebcf0930800000000000000
+      internalID: 4111729166681496203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6ec3116bb2fae50800000000000000
+      internalID: 6822720021462836938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b2b21b456f0a3c0800000000000000
+      internalID: -4350206396429816961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e17da5e54485a810800000000000000
+      internalID: 1775971063808487910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 48
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af6c1d3e77a5aad0800000000000000
+      internalID: -2691561041651011677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8652969cafedbe90800000000000000
+      internalID: -7008181920579037555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c623da31f2ecbd0800000000000000
+      internalID: -2608095372644291432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b2a80cea35d34f0800000000000000
+      internalID: -847429144856089797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f02d512e863f740800000000000000
+      internalID: 5184602916271558459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb038dbad8a17180800000000000000
+      internalID: -9119322113012724758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 2105
+        y: 50
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d6df9c27eef2d00800000000000000
+      internalID: 950240223180975392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b70f8f231221e190800000000000000
+      internalID: -7935023602652477517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69808bb1d60833ca0800000000000000
+      internalID: -6038341469268866922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384aec09829b5b880800000000000000
+      internalID: -8595760729887431549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 46
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6adab540bdbf8970800000000000000
+      internalID: 8759428365040671342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e3266f853b7e3a0800000000000000
+      internalID: -6636138331235008883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 2873
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460f5703407deab50800000000000000
+      internalID: 6606454116391972964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7036a0d0091c27610800000000000000
+      internalID: 1617568040617665287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026fc2c475e8e52a0800000000000000
+      internalID: -6746798686163110368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 3257
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea19478d0d4a10450800000000000000
+      internalID: 6053300591054328238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 3385
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f6aa8e701dda8d0800000000000000
+      internalID: -2833378758647713927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 3513
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513826a9f4e8c58e0800000000000000
+      internalID: -1703330086509182187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 3641
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46563c98b50f72e00800000000000000
+      internalID: 1020048116566680932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82864870a43fc99b0800000000000000
+      internalID: -5071911581046773720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 3897
+        y: 48
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba274b9ba98ce240800000000000000
+      internalID: 4822380671144503994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 4025
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60c564df3d261cd0800000000000000
+      internalID: -2587831183708143509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 4153
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777257bb99a5ab2f0800000000000000
+      internalID: -956352354541295753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 4281
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee692696e410e1170800000000000000
+      internalID: 8150953811874322158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1210947ef074680800000000000000
+      internalID: -8771024263244078680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 4537
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf21ed3101ada9560800000000000000
+      internalID: 7321403906831815419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 4665
+        y: 50
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12344f4489130bf80800000000000000
+      internalID: -8092914000323132639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 4793
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e996d02855b5e70800000000000000
+      internalID: 9104965088718724671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 4921
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f520eee9607d800800000000000000
+      internalID: 636985151963946824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 5049
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43c1910d9065bc40800000000000000
+      internalID: 5527430345119613774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 5177
+        y: 46
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0652dffb32062c0800000000000000
+      internalID: -4440509925094498049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 5305
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542380370cb184790800000000000000
+      internalID: -7545750662281678267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 5433
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de5b13974a9efab0800000000000000
+      internalID: -4972367306369048871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 5561
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05020306b1adfe40800000000000000
+      internalID: 5691883307172758799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 5689
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6590a95b93e2bec90800000000000000
+      internalID: -7139561958871004842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 5817
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9025d47ac8b57db0800000000000000
+      internalID: -4794723048582995812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 5945
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d54dcb07f6df29d0800000000000000
+      internalID: -2796780487030520365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 6073
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f3700c1f6697b40800000000000000
+      internalID: 5438491213521436541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 6201
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936b3a5cad146b140800000000000000
+      internalID: 4735044466101171769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 6329
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162d9af6619aa1430800000000000000
+      internalID: 3754499153194504801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 6457
+        y: 48
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2ef9a3f1a040850800000000000000
+      internalID: 6342205304488321779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 6585
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2cc48864418fb40800000000000000
+      internalID: 5474147640235836090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 6713
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febbc607c82ecbbd0800000000000000
+      internalID: -2612964590972257297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 6841
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9cb235980e57260800000000000000
+      internalID: 7094823668402604489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 6969
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc70a1c548da30b70800000000000000
+      internalID: 8864119275587766219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 7097
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31322c709bddca860800000000000000
+      internalID: 7542647262707589907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 7225
+        y: 50
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7267740362795a880800000000000000
+      internalID: -8600301723119552985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 7353
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7956124a642b6dbc0800000000000000
+      internalID: -3758620822522993257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 7481
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffaa66a62b36c300800000000000000
+      internalID: 271969864689299443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 7609
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71ccce8116d09570800000000000000
+      internalID: 8471506269982474618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 7737
+        y: 46
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1e14b4a10eaa2c0800000000000000
+      internalID: -4419473680774340101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 7865
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d2cf706d35049a0800000000000000
+      internalID: -6250904104068174463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 7993
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f731554919ca7c0800000000000000
+      internalID: -4058709097899131085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 8121
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f2b256290ddb3e0800000000000000
+      internalID: -2036242129320464502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 8249
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdaec48ea8121300800000000000000
+      internalID: 221266469526089145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 8377
+        y: 44
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d2b3cc6f0f3c5c0800000000000000
+      internalID: -4196245485000118955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 8505
+        y: 44
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcea404da6864170800000000000000
+      internalID: 8162359453321718992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 8633
+        y: 45
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f996f7b5bd3e5750800000000000000
+      internalID: 6295537179795298808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 8761
+        y: 46
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1155e7daf3290a490800000000000000
+      internalID: -7737023357631179503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 8889
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32ebf60010448890800000000000000
+      internalID: -7456764645437873605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 9017
+        y: 48
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a481acaca5ca46f0800000000000000
+      internalID: -699529446681377623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 9145
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521b927cef3c80bd0800000000000000
+      internalID: -2663663680559140571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 9273
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50b5c71d858a0b50800000000000000
+      internalID: 6560202648254263391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 9401
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97521e3d400c5e790800000000000000
+      internalID: -7501378477348543111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 9529
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce63a8c9e06649c0800000000000000
+      internalID: -3943357866506490175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 9657
+        y: 50
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ef83d9dda9bf420800000000000000
+      internalID: 2664893881135988248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 9785
+        y: 50
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0022ee2ee9f3a130800000000000000
+      internalID: 3576977330446409740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 9913
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b56d45aa57fe95f0800000000000000
+      internalID: -747888519404493387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 10041
+        y: 48
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c989609be8148070800000000000000
+      internalID: 8107632629192952262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamSuckerSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 10169
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd5a590dbc0cda80800000000000000
+      internalID: -8440857595553882692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DreamSuckerSpriteSheet_0: 8842669692922490239
+      DreamSuckerSpriteSheet_1: -7265112276054075439
+      DreamSuckerSpriteSheet_10: -2691561041651011677
+      DreamSuckerSpriteSheet_11: -7008181920579037555
+      DreamSuckerSpriteSheet_12: -2608095372644291432
+      DreamSuckerSpriteSheet_13: -847429144856089797
+      DreamSuckerSpriteSheet_14: 5184602916271558459
+      DreamSuckerSpriteSheet_15: -9119322113012724758
+      DreamSuckerSpriteSheet_16: 950240223180975392
+      DreamSuckerSpriteSheet_17: -7935023602652477517
+      DreamSuckerSpriteSheet_18: -6038341469268866922
+      DreamSuckerSpriteSheet_19: -8595760729887431549
+      DreamSuckerSpriteSheet_2: -8064932578825194949
+      DreamSuckerSpriteSheet_20: 8759428365040671342
+      DreamSuckerSpriteSheet_21: -6636138331235008883
+      DreamSuckerSpriteSheet_22: 6606454116391972964
+      DreamSuckerSpriteSheet_23: 1617568040617665287
+      DreamSuckerSpriteSheet_24: -6746798686163110368
+      DreamSuckerSpriteSheet_25: 6053300591054328238
+      DreamSuckerSpriteSheet_26: -2833378758647713927
+      DreamSuckerSpriteSheet_27: -1703330086509182187
+      DreamSuckerSpriteSheet_28: 1020048116566680932
+      DreamSuckerSpriteSheet_29: -5071911581046773720
+      DreamSuckerSpriteSheet_3: 4153613745286988272
+      DreamSuckerSpriteSheet_30: 4822380671144503994
+      DreamSuckerSpriteSheet_31: -2587831183708143509
+      DreamSuckerSpriteSheet_32: -956352354541295753
+      DreamSuckerSpriteSheet_33: 8150953811874322158
+      DreamSuckerSpriteSheet_34: -8771024263244078680
+      DreamSuckerSpriteSheet_35: 7321403906831815419
+      DreamSuckerSpriteSheet_36: -8092914000323132639
+      DreamSuckerSpriteSheet_37: 9104965088718724671
+      DreamSuckerSpriteSheet_38: 636985151963946824
+      DreamSuckerSpriteSheet_39: 5527430345119613774
+      DreamSuckerSpriteSheet_4: 3704284781103427160
+      DreamSuckerSpriteSheet_40: -4440509925094498049
+      DreamSuckerSpriteSheet_41: -7545750662281678267
+      DreamSuckerSpriteSheet_42: -4972367306369048871
+      DreamSuckerSpriteSheet_43: 5691883307172758799
+      DreamSuckerSpriteSheet_44: -7139561958871004842
+      DreamSuckerSpriteSheet_45: -4794723048582995812
+      DreamSuckerSpriteSheet_46: -2796780487030520365
+      DreamSuckerSpriteSheet_47: 5438491213521436541
+      DreamSuckerSpriteSheet_48: 4735044466101171769
+      DreamSuckerSpriteSheet_49: 3754499153194504801
+      DreamSuckerSpriteSheet_5: 23444391437863204
+      DreamSuckerSpriteSheet_50: 6342205304488321779
+      DreamSuckerSpriteSheet_51: 5474147640235836090
+      DreamSuckerSpriteSheet_52: -2612964590972257297
+      DreamSuckerSpriteSheet_53: 7094823668402604489
+      DreamSuckerSpriteSheet_54: 8864119275587766219
+      DreamSuckerSpriteSheet_55: 7542647262707589907
+      DreamSuckerSpriteSheet_56: -8600301723119552985
+      DreamSuckerSpriteSheet_57: -3758620822522993257
+      DreamSuckerSpriteSheet_58: 271969864689299443
+      DreamSuckerSpriteSheet_59: 8471506269982474618
+      DreamSuckerSpriteSheet_6: 4111729166681496203
+      DreamSuckerSpriteSheet_60: -4419473680774340101
+      DreamSuckerSpriteSheet_61: -6250904104068174463
+      DreamSuckerSpriteSheet_62: -4058709097899131085
+      DreamSuckerSpriteSheet_63: -2036242129320464502
+      DreamSuckerSpriteSheet_64: 221266469526089145
+      DreamSuckerSpriteSheet_65: -4196245485000118955
+      DreamSuckerSpriteSheet_66: 8162359453321718992
+      DreamSuckerSpriteSheet_67: 6295537179795298808
+      DreamSuckerSpriteSheet_68: -7737023357631179503
+      DreamSuckerSpriteSheet_69: -7456764645437873605
+      DreamSuckerSpriteSheet_7: 6822720021462836938
+      DreamSuckerSpriteSheet_70: -699529446681377623
+      DreamSuckerSpriteSheet_71: -2663663680559140571
+      DreamSuckerSpriteSheet_72: 6560202648254263391
+      DreamSuckerSpriteSheet_73: -7501378477348543111
+      DreamSuckerSpriteSheet_74: -3943357866506490175
+      DreamSuckerSpriteSheet_75: 2664893881135988248
+      DreamSuckerSpriteSheet_76: 3576977330446409740
+      DreamSuckerSpriteSheet_77: -747888519404493387
+      DreamSuckerSpriteSheet_78: 8107632629192952262
+      DreamSuckerSpriteSheet_79: -8440857595553882692
+      DreamSuckerSpriteSheet_8: -4350206396429816961
+      DreamSuckerSpriteSheet_9: 1775971063808487910
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
