@@ -129,6 +129,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4HitText.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
+    <Compile Include="Assets\Scripts\LightActivatedMovingPlatform.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\SimpleGameObjectPool.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />

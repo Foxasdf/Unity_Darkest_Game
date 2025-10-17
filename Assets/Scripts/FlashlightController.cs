@@ -22,6 +22,7 @@ public class FlashlightController : MonoBehaviour
 	
 	[Header("Detection Settings")]
 	[SerializeField] private LayerMask detectionLayers;
+	[SerializeField] private LayerMask blockingLayers; // NEW: What blocks the light
 	[SerializeField] private float coneAngle = 30f; // Cone angle for spot light detection
     
 	private Camera mainCam;
@@ -108,33 +109,36 @@ public class FlashlightController : MonoBehaviour
 	{
 		if (!isFlashlightOn || target == null)
 			return false;
-		
+
 		// Calculate direction to target
 		Vector2 directionToTarget = (target.position - transform.position).normalized;
-		
+
 		// Get flashlight direction (transform.up for spot lights)
 		Vector2 flashlightDir = GetFlashlightDirection();
-		
+
 		// Calculate angle between flashlight and target
 		float angleToTarget = Vector2.Angle(flashlightDir, directionToTarget);
-		
+
 		// Check if target is within cone angle
 		if (angleToTarget > coneAngle / 2f)
 			return false;
-		
+
 		// Check distance
 		float distanceToTarget = Vector2.Distance(transform.position, target.position);
 		if (distanceToTarget > maxDistance)
 			return false;
-		
+
 		// Raycast to check if there's a direct line of sight
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToTarget, maxDistance, detectionLayers);
-		
+		// Combine detection and blocking layers so we can see what's in between
+		LayerMask combinedMask = detectionLayers | blockingLayers;
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToTarget, maxDistance, combinedMask);
+
+		// Only return true if the raycast hits the target directly (no blocking object in between)
 		if (hit.collider != null && hit.transform == target)
 		{
 			return true;
 		}
-		
+
 		return false;
 	}
 	
@@ -166,7 +170,42 @@ public class FlashlightController : MonoBehaviour
 			Gizmos.DrawLine(transform.position, mousePos);
 		}
 	}
-	
+	// Check if a world position is lit, optionally ignoring a specific collider (e.g., the platform itself)
+	public bool IsPositionLit(Vector2 worldPosition, Collider2D ignoreCollider = null)
+	{
+		if (!isFlashlightOn)
+			return false;
+
+		Vector2 directionToPos = (worldPosition - (Vector2)transform.position).normalized;
+		float distance = Vector2.Distance(transform.position, worldPosition);
+
+		if (distance > maxDistance)
+			return false;
+
+		Vector2 flashlightDir = GetFlashlightDirection();
+		float angleToPos = Vector2.Angle(flashlightDir, directionToPos);
+		if (angleToPos > coneAngle / 2f)
+			return false;
+
+		// Perform raycast, ignoring the specified collider (e.g., the platform's own collider)
+		RaycastHit2D hit = Physics2D.Raycast(
+			transform.position,
+			directionToPos,
+			distance,
+			blockingLayers
+		);
+
+		// If nothing hit, it's lit
+		if (hit.collider == null)
+			return true;
+
+		// If the only thing hit is the one we're allowed to ignore, it's still lit
+		if (ignoreCollider != null && hit.collider == ignoreCollider)
+			return true;
+
+		// Otherwise, something else is blocking
+		return false;
+	}
 	public bool IsFlashlightOn()
 	{
 		return isFlashlightOn;
