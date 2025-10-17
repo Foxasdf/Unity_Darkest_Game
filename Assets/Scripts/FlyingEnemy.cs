@@ -12,12 +12,17 @@ public class FlyingEnemy : MonoBehaviour
 	[Header("Chase Settings")]
 	[SerializeField] private float chaseSpeed = 5f;
 	[SerializeField] private float chaseAcceleration = 8f;
-	[SerializeField] private float stoppingDistance = 0.5f; // How close to get to player
-	[SerializeField] private float targetHeightOffset = 1f; // Aim higher than player's feet
+	[SerializeField] private float stoppingDistance = 0.5f;
+	[SerializeField] private float targetHeightOffset = 1f;
 	
 	[Header("Player Detection")]
 	[SerializeField] private float knockbackForce = 12f;
-	
+
+	// NEW: Animation
+	[Header("Animation")]
+	[SerializeField] private Animator animator;
+	[SerializeField] private string animationParamName = "isMoving"; // Use "Speed" or "Move" if using floats
+
 	private Rigidbody2D rb;
 	private CircleCollider2D col;
 	private Transform playerTransform;
@@ -35,6 +40,9 @@ public class FlyingEnemy : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<CircleCollider2D>();
+
+		// NEW: Cache animator
+		animator = GetComponent<Animator>(); // Assumes Animator is on same GameObject
 	}
 	
 	private void Start()
@@ -42,7 +50,7 @@ public class FlyingEnemy : MonoBehaviour
 		// Configure Rigidbody2D for flying
 		rb.bodyType = RigidbodyType2D.Dynamic;
 		rb.gravityScale = 0f; // No gravity - it flies!
-		rb.linearDamping = 2f; // Some air resistance for smooth movement
+		rb.linearDamping = 2f; // Some air resistance
 		rb.freezeRotation = true;
 		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 		rb.interpolation = RigidbodyInterpolation2D.Interpolate;
@@ -84,28 +92,27 @@ public class FlyingEnemy : MonoBehaviour
 		{
 			IdleHover();
 		}
+
+		// NEW: Update animation after physics update
+		UpdateAnimation();
 	}
 	
 	private void IdleHover()
 	{
-		// Simple sine wave hovering
 		hoverOffset += Time.fixedDeltaTime * idleHoverSpeed;
 		
 		Vector2 targetPosition;
 		if (hoverVertically)
 		{
-			// Hover up and down
 			float yOffset = Mathf.Sin(hoverOffset) * idleHoverRange;
 			targetPosition = new Vector2(startPosition.x, startPosition.y + yOffset);
 		}
 		else
 		{
-			// Hover left and right
 			float xOffset = Mathf.Sin(hoverOffset) * idleHoverRange;
 			targetPosition = new Vector2(startPosition.x + xOffset, startPosition.y);
 		}
 		
-		// Smoothly move toward hover position
 		Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
 		float distance = Vector2.Distance(transform.position, targetPosition);
 		
@@ -114,7 +121,6 @@ public class FlyingEnemy : MonoBehaviour
 			rb.AddForce(direction * chaseAcceleration * 0.5f);
 		}
 		
-		// Limit speed
 		if (rb.linearVelocity.magnitude > idleHoverSpeed)
 		{
 			rb.linearVelocity = rb.linearVelocity.normalized * idleHoverSpeed;
@@ -129,21 +135,17 @@ public class FlyingEnemy : MonoBehaviour
 			return;
 		}
 		
-		// Calculate target position (player position + height offset)
-		Vector2 targetPosition = new Vector2(playerTransform.position.x, 
+		Vector2 targetPosition = new Vector2(
+			playerTransform.position.x, 
 			playerTransform.position.y + targetHeightOffset);
 		
-		// Calculate direction to target
 		Vector2 directionToPlayer = (targetPosition - (Vector2)transform.position).normalized;
 		float distanceToPlayer = Vector2.Distance(transform.position, targetPosition);
 		
-		// Only move if we're not too close
 		if (distanceToPlayer > stoppingDistance)
 		{
-			// Apply force toward player
 			rb.AddForce(directionToPlayer * chaseAcceleration);
 			
-			// Limit max speed
 			if (rb.linearVelocity.magnitude > chaseSpeed)
 			{
 				rb.linearVelocity = rb.linearVelocity.normalized * chaseSpeed;
@@ -151,25 +153,43 @@ public class FlyingEnemy : MonoBehaviour
 		}
 		else
 		{
-			// Slow down when close
 			rb.linearVelocity *= 0.9f;
+		}
+	}
+
+	// NEW: Control animation based on motion/state
+	private void UpdateAnimation()
+	{
+		// Option 1: Use a boolean — play animation only when chasing
+		bool shouldPlayAnimation = isChasing;
+
+		// OR Option 2: Use speed — more realistic (recommended)
+		float currentSpeed = rb.linearVelocity.magnitude;
+        
+		if (animator != null)
+		{
+			// If you're using a FLOAT parameter like "Speed"
+			if (animator.parameters.Length > 0 && animator.GetParameter(0).type == AnimatorControllerParameterType.Float)
+			{
+				animator.SetFloat("Speed", currentSpeed); // Adjust in Animator to scale motion
+			}
+			// If using BOOL like "isMoving"
+			else
+			{
+				animator.SetBool(animationParamName, shouldPlayAnimation);
+			}
 		}
 	}
 	
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		// Check if we hit the player
 		if (collision.gameObject.CompareTag("Player"))
 		{
-			// Try to get player's Rigidbody2D for knockback
 			Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
 			
 			if (playerRb != null)
 			{
-				// Calculate knockback direction (away from enemy)
 				Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
-				
-				// Apply knockback
 				playerRb.linearVelocity = new Vector2(knockbackDir.x * knockbackForce, knockbackForce * 0.5f);
 			}
 		}
@@ -177,7 +197,6 @@ public class FlyingEnemy : MonoBehaviour
 	
 	private void OnDrawGizmosSelected()
 	{
-		// Draw idle hover range
 		if (!Application.isPlaying)
 		{
 			Gizmos.color = Color.cyan;
@@ -194,11 +213,9 @@ public class FlyingEnemy : MonoBehaviour
 		}
 		else
 		{
-			// Draw chase state
 			Gizmos.color = isChasing ? Color.red : Color.green;
 			Gizmos.DrawWireSphere(transform.position, 0.5f);
 			
-			// Draw line to start position when idle
 			if (!isChasing)
 			{
 				Gizmos.color = Color.cyan;

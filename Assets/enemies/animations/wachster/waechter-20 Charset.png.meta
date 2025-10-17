@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 24e474e7f76761e4f9567dd0a6a98ef6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -587970700652822303
+    second: waechter-20 Charset_0
+  - first:
+      213: -5679810914435183594
+    second: waechter-20 Charset_1
+  - first:
+      213: -6086085612522619036
+    second: waechter-20 Charset_2
+  - first:
+      213: -5030507814010515522
+    second: waechter-20 Charset_3
+  - first:
+      213: 310807605429189431
+    second: waechter-20 Charset_4
+  - first:
+      213: -7951984290474068382
+    second: waechter-20 Charset_5
+  - first:
+      213: -457553849310584620
+    second: waechter-20 Charset_6
+  - first:
+      213: 8316979579191263918
+    second: waechter-20 Charset_7
+  - first:
+      213: 1404243727462083249
+    second: waechter-20 Charset_8
+  - first:
+      213: 7128221912281764595
+    second: waechter-20 Charset_9
+  - first:
+      213: -8432057705932204564
+    second: waechter-20 Charset_10
+  - first:
+      213: 8958506607829452028
+    second: waechter-20 Charset_11
+  - first:
+      213: -4336454507510181837
+    second: waechter-20 Charset_12
+  - first:
+      213: -3956429638214374762
+    second: waechter-20 Charset_13
+  - first:
+      213: -3973635644451105095
+    second: waechter-20 Charset_14
+  - first:
+      213: -2009888077120741500
+    second: waechter-20 Charset_15
+  - first:
+      213: -5903677454136222233
+    second: waechter-20 Charset_16
+  - first:
+      213: 5741012675974274632
+    second: waechter-20 Charset_17
+  - first:
+      213: 2603905554505198735
+    second: waechter-20 Charset_18
+  - first:
+      213: -2803454900882435867
+    second: waechter-20 Charset_19
+  - first:
+      213: -8982589139393308613
+    second: waechter-20 Charset_20
+  - first:
+      213: 3548337739057155754
+    second: waechter-20 Charset_21
+  - first:
+      213: -3104404544554128023
+    second: waechter-20 Charset_22
+  - first:
+      213: -6032023608290759255
+    second: waechter-20 Charset_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: waechter-20 Charset_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 683
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0404153cb17d7f0800000000000000
+      internalID: -587970700652822303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 683
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c44b5f0124d21b0800000000000000
+      internalID: -5679810914435183594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 684
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f39f08161e98ba0800000000000000
+      internalID: -6086085612522619036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_3
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 683
+        width: 75
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf8312cbcb003ab0800000000000000
+      internalID: -5030507814010515522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_4
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 684
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bb813ded5305400800000000000000
+      internalID: 310807605429189431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_5
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 684
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2667ec25b60e4a190800000000000000
+      internalID: -7951984290474068382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 588
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0ea32c23176a9f0800000000000000
+      internalID: -457553849310584620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 588
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea28fddacd8db6370800000000000000
+      internalID: 8316979579191263918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_8
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 587
+        width: 75
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1baa279ea30ec7310800000000000000
+      internalID: 1404243727462083249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_9
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 587
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2d5b1ff088ce260800000000000000
+      internalID: 7128221912281764595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_10
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 587
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5d05001305bfa80800000000000000
+      internalID: -8432057705932204564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_11
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 588
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf40aadab42035c70800000000000000
+      internalID: 8958506607829452028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 491
+        width: 75
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330d637d991d1d3c0800000000000000
+      internalID: -4336454507510181837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 492
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69aa763c430f719c0800000000000000
+      internalID: -3956429638214374762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_14
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 492
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b659a14f6fcad8c0800000000000000
+      internalID: -3973635644451105095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_15
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 492
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fdce451717b14e0800000000000000
+      internalID: -2009888077120741500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 491
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed5abd62ace11ea0800000000000000
+      internalID: -5903677454136222233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_17
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 491
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e16729c9c2caf40800000000000000
+      internalID: 5741012675974274632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 396
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ce2f44e4ee22420800000000000000
+      internalID: 2603905554505198735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_19
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 395
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e01319fe902819d0800000000000000
+      internalID: -2803454900882435867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_20
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 395
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b381e2ff4ce675380800000000000000
+      internalID: -8982589139393308613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_21
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 396
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae4d9faf5a3e3130800000000000000
+      internalID: 3548337739057155754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_22
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 395
+        width: 72
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d2ebab380fae4d0800000000000000
+      internalID: -3104404544554128023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waechter-20 Charset_23
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 395
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad2f0fbc72f94ca0800000000000000
+      internalID: -6032023608290759255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      waechter-20 Charset_0: -587970700652822303
+      waechter-20 Charset_1: -5679810914435183594
+      waechter-20 Charset_10: -8432057705932204564
+      waechter-20 Charset_11: 8958506607829452028
+      waechter-20 Charset_12: -4336454507510181837
+      waechter-20 Charset_13: -3956429638214374762
+      waechter-20 Charset_14: -3973635644451105095
+      waechter-20 Charset_15: -2009888077120741500
+      waechter-20 Charset_16: -5903677454136222233
+      waechter-20 Charset_17: 5741012675974274632
+      waechter-20 Charset_18: 2603905554505198735
+      waechter-20 Charset_19: -2803454900882435867
+      waechter-20 Charset_2: -6086085612522619036
+      waechter-20 Charset_20: -8982589139393308613
+      waechter-20 Charset_21: 3548337739057155754
+      waechter-20 Charset_22: -3104404544554128023
+      waechter-20 Charset_23: -6032023608290759255
+      waechter-20 Charset_3: -5030507814010515522
+      waechter-20 Charset_4: 310807605429189431
+      waechter-20 Charset_5: -7951984290474068382
+      waechter-20 Charset_6: -457553849310584620
+      waechter-20 Charset_7: 8316979579191263918
+      waechter-20 Charset_8: 1404243727462083249
+      waechter-20 Charset_9: 7128221912281764595
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
