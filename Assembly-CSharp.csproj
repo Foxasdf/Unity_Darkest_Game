@@ -71,6 +71,7 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4RecyclableBall.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolBase.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
+    <Compile Include="Assets\Scripts\play_footsteps.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGOPoolKit.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableMonoBehaviour.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\DemoRecyclableBall.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
+    <Compile Include="Assets\playsoundEnter.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\Demo3Manager.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
@@ -125,6 +127,7 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObjectPool.cs" />
     <Compile Include="Assets\Scripts\moving_plat.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\sound_manager.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4HitText.cs" />

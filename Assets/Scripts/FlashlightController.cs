@@ -94,8 +94,8 @@ public class FlashlightController : MonoBehaviour
 				flashlight.enabled = true;
 			if (flashlightSprite != null)
 				flashlightSprite.enabled = true;
-
-			PlaySound(turnOnSound); // Only play "on" sound
+			sound_manager.play_sound(soundType.flashlight_on);
+			//PlaySound(turnOnSound); // Only play "on" sound
 		}
 		else if (Input.GetKeyUp(toggleKey))
 		{
@@ -104,8 +104,9 @@ public class FlashlightController : MonoBehaviour
 				flashlight.enabled = false;
 			if (flashlightSprite != null)
 				flashlightSprite.enabled = false;
-
-			PlaySound(turnOffSound); // Only play "off" sound
+			
+			sound_manager.play_sound(soundType.flashlight_off);
+			//PlaySound(turnOffSound); // Only play "off" sound
 		}
 	}
 
