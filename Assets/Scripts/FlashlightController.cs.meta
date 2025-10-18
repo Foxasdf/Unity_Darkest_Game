@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: 1ba6b21ff1035354b8fe741a5be6774e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - flashlight: {instanceID: 0}
+  - flashlightSprite: {instanceID: 0}
+  - turnOnSound: {fileID: 8300000, guid: a418d91cb4fb5f745a994bb41e11956c, type: 3}
+  - turnOffSound: {fileID: 8300000, guid: 853a0c0e055d87b4f94a33e274478351, type: 3}
+  - audioSource: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

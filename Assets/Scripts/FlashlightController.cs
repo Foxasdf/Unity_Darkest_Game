@@ -5,9 +5,9 @@ public class FlashlightController : MonoBehaviour
 {
 	[Header("Flashlight Settings")]
 	[SerializeField] private Light2D flashlight;
-	[SerializeField] private KeyCode toggleKey = KeyCode.F;
+	[SerializeField] private KeyCode toggleKey = KeyCode.Mouse0;
 	[SerializeField] private float maxDistance = 15f;
-	
+    
 	[Header("Rotation Offset")]
 	[Tooltip("Spot lights point up by default, so we need -90 offset. Point lights use 0.")]
 	[SerializeField] private float rotationOffset = -90f;
@@ -19,12 +19,22 @@ public class FlashlightController : MonoBehaviour
 	[Header("Visual Feedback")]
 	[SerializeField] private SpriteRenderer flashlightSprite;
 	[SerializeField] private bool showDebugRay = true;
-	
+    
 	[Header("Detection Settings")]
 	[SerializeField] private LayerMask detectionLayers;
-	[SerializeField] private LayerMask blockingLayers; // NEW: What blocks the light
-	[SerializeField] private float coneAngle = 30f; // Cone angle for spot light detection
+	[SerializeField] private LayerMask blockingLayers;
+	[SerializeField] private float coneAngle = 30f;
+
+	// NEW: Separate sounds for on/off + audio source
+	[Header("Audio")]
+	[Tooltip("Sound played when flashlight turns ON")]
+	[SerializeField] private AudioClip turnOnSound;
     
+	[Tooltip("Sound played when flashlight turns OFF")]
+	[SerializeField] private AudioClip turnOffSound;
+    
+	[SerializeField] private AudioSource audioSource;
+
 	private Camera mainCam;
 	private bool isFlashlightOn = false;
 	private Transform playerTransform;
@@ -39,13 +49,30 @@ public class FlashlightController : MonoBehaviour
 		if (flashlight != null)
 			flashlight.enabled = false;
             
-		// Initialize angles to point at mouse immediately
+		// Initialize angle to face mouse
 		Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z = 0f;
 		Vector2 direction = (mousePos - transform.position).normalized;
 		currentAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationOffset;
 		targetAngle = currentAngle;
 		transform.rotation = Quaternion.Euler(0, 0, currentAngle);
+
+		// Setup audio source
+		if (audioSource == null)
+		{
+			audioSource = GetComponent<AudioSource>();
+			if (audioSource == null)
+			{
+				audioSource = gameObject.AddComponent<AudioSource>();
+			}
+		}
+
+		// Audio settings
+		audioSource.playOnAwake = false;
+		audioSource.spatialBlend = 1f;         // 3D sound
+		audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+		audioSource.minDistance = 5f;
+		audioSource.maxDistance = 20f;
 	}
 	
 	void Update()
@@ -67,6 +94,8 @@ public class FlashlightController : MonoBehaviour
 				flashlight.enabled = true;
 			if (flashlightSprite != null)
 				flashlightSprite.enabled = true;
+
+			PlaySound(turnOnSound); // Only play "on" sound
 		}
 		else if (Input.GetKeyUp(toggleKey))
 		{
@@ -75,22 +104,27 @@ public class FlashlightController : MonoBehaviour
 				flashlight.enabled = false;
 			if (flashlightSprite != null)
 				flashlightSprite.enabled = false;
+
+			PlaySound(turnOffSound); // Only play "off" sound
+		}
+	}
+
+	// Helper to play any sound safely
+	private void PlaySound(AudioClip clip)
+	{
+		if (clip != null && audioSource != null)
+		{
+			audioSource.PlayOneShot(clip);
 		}
 	}
 	
 	void PointAtMouse()
 	{
-		// Get mouse position in world space
 		Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z = 0f;
-        
-		// Calculate direction from flashlight to mouse
 		Vector2 direction = (mousePos - transform.position).normalized;
-        
-		// Calculate target angle with offset
 		targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotationOffset;
-        
-		// Smooth or instant rotation
+		
 		if (useSmoothing)
 		{
 			currentAngle = Mathf.LerpAngle(currentAngle, targetAngle, smoothSpeed * Time.deltaTime);
@@ -99,41 +133,29 @@ public class FlashlightController : MonoBehaviour
 		{
 			currentAngle = targetAngle;
 		}
-        
-		// Apply rotation
+		
 		transform.rotation = Quaternion.Euler(0, 0, currentAngle);
 	}
 	
-	// Check if flashlight is pointing at a specific target
 	public bool IsPointingAt(Transform target)
 	{
 		if (!isFlashlightOn || target == null)
 			return false;
 
-		// Calculate direction to target
 		Vector2 directionToTarget = (target.position - transform.position).normalized;
-
-		// Get flashlight direction (transform.up for spot lights)
 		Vector2 flashlightDir = GetFlashlightDirection();
-
-		// Calculate angle between flashlight and target
 		float angleToTarget = Vector2.Angle(flashlightDir, directionToTarget);
 
-		// Check if target is within cone angle
 		if (angleToTarget > coneAngle / 2f)
 			return false;
 
-		// Check distance
 		float distanceToTarget = Vector2.Distance(transform.position, target.position);
 		if (distanceToTarget > maxDistance)
 			return false;
 
-		// Raycast to check if there's a direct line of sight
-		// Combine detection and blocking layers so we can see what's in between
 		LayerMask combinedMask = detectionLayers | blockingLayers;
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToTarget, maxDistance, combinedMask);
 
-		// Only return true if the raycast hits the target directly (no blocking object in between)
 		if (hit.collider != null && hit.transform == target)
 		{
 			return true;
@@ -144,14 +166,11 @@ public class FlashlightController : MonoBehaviour
 	
 	void OnDrawGizmosSelected()
 	{
-		// Visual debug in editor - draws a line showing where the flashlight is pointing
 		if (Application.isPlaying && mainCam != null)
 		{
 			Gizmos.color = isFlashlightOn ? Color.yellow : Color.gray;
-			// Use transform.up for spot lights since they point upward
 			Gizmos.DrawRay(transform.position, transform.up * maxDistance);
 			
-			// Draw cone edges
 			if (isFlashlightOn)
 			{
 				Vector2 dir = transform.up;
@@ -163,14 +182,13 @@ public class FlashlightController : MonoBehaviour
 				Gizmos.DrawRay(transform.position, rightEdge * maxDistance);
 			}
 			
-			// Draw line to mouse for debugging
 			Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 			mousePos.z = 0f;
 			Gizmos.color = Color.red;
 			Gizmos.DrawLine(transform.position, mousePos);
 		}
 	}
-	// Check if a world position is lit, optionally ignoring a specific collider (e.g., the platform itself)
+
 	public bool IsPositionLit(Vector2 worldPosition, Collider2D ignoreCollider = null)
 	{
 		if (!isFlashlightOn)
@@ -187,7 +205,6 @@ public class FlashlightController : MonoBehaviour
 		if (angleToPos > coneAngle / 2f)
 			return false;
 
-		// Perform raycast, ignoring the specified collider (e.g., the platform's own collider)
 		RaycastHit2D hit = Physics2D.Raycast(
 			transform.position,
 			directionToPos,
@@ -195,17 +212,15 @@ public class FlashlightController : MonoBehaviour
 			blockingLayers
 		);
 
-		// If nothing hit, it's lit
 		if (hit.collider == null)
 			return true;
 
-		// If the only thing hit is the one we're allowed to ignore, it's still lit
 		if (ignoreCollider != null && hit.collider == ignoreCollider)
 			return true;
 
-		// Otherwise, something else is blocking
 		return false;
 	}
+	
 	public bool IsFlashlightOn()
 	{
 		return isFlashlightOn;
@@ -213,7 +228,6 @@ public class FlashlightController : MonoBehaviour
 	
 	public Vector2 GetFlashlightDirection()
 	{
-		// For spot lights, use transform.up since they point upward
 		return transform.up;
 	}
     
