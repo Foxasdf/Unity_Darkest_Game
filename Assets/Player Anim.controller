@@ -118,7 +118,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -5252816984213320552, guid: 7953c76bc82b8074c87c95fca89e0a96, type: 3}
+  m_Motion: {fileID: 7400000, guid: aa372d0f103d9bb4db758640e45b02f6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
