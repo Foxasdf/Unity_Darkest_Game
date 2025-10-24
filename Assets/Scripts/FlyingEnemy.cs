@@ -85,6 +85,7 @@ public class FlyingEnemy : MonoBehaviour, IStunnable
 			if (stunTimer <= 0f)
 			{
 				isStunned = false;
+				hasBeenSpotted = false; // 👈 allow flashlight to trigger again
 			}
 			return; // skip normal movement while stunned
 		}
