@@ -101,6 +101,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\destroy_prefab.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4Manager.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
     <Compile Include="Assets\Scripts\FlyingEnemy.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecycleObjectType.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Common\ObjectPoolKit.cs" />
+    <Compile Include="Assets\Scripts\IStunnable.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\ISimpleGameObjectPool.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo2_ObjectReferencePool\Scripts\Demo2Manager.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableEventArgs.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Assets\Scripts\moving_plat.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Scripts\sound_manager.cs" />
+    <Compile Include="Assets\Scripts\Mine.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4HitText.cs" />
@@ -136,6 +139,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\SimpleGameObjectPool.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
+    <Compile Include="Assets\Scripts\ExplosionStunArea.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalLineAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
