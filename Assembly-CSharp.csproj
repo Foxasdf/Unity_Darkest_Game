@@ -68,16 +68,19 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolInfo.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObject.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
+    <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4RecyclableBall.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolBase.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
     <Compile Include="Assets\Scripts\play_footsteps.cs" />
+    <Compile Include="Assets\Scripts\NPCDialogue.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGOPoolKit.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\SimpleGOPoolKit.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IAbstractPool.cs" />
+    <Compile Include="Assets\Scripts\InteractionDetector.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Enum.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGameObjectPool.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IRecyclablePool.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
     <Compile Include="Assets\playsoundEnter.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\Demo3Manager.cs" />
+    <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
     <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
     <Compile Include="Assets\Scripts\ExplosionAnimationEvents.cs" />
@@ -117,6 +121,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecycleObjectType.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
+    <Compile Include="Assets\Scripts\NPC1.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Common\ObjectPoolKit.cs" />
     <Compile Include="Assets\Scripts\IStunnable.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\ISimpleGameObjectPool.cs" />
@@ -149,9 +154,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cainos\Third Party\Lucid Editor\License.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Art Assets\Pixel Art Platformer - Village Props v2.3.0\Changelog.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Art Assets\Steven01\Read me.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

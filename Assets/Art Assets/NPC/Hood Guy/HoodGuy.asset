@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9b3e51f901e4c48af7467d77516c17, type: 3}
+  m_Name: HoodGuy
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Hood Guy
+  npcPotrait: {fileID: 4723089349711110102, guid: 018a02cd2d9d2d247bfbb66d0eebcc6c, type: 3}
+  dialogueLines:
+  - Ahm...
+  - Hello There young Fella
+  autoProgressLines: 0100
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 30cf309ad7bc22a498c3710693f23efc, type: 3}
+  voicePitch: 1
