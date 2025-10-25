@@ -22,7 +22,7 @@ public class FlyingEnemy : MonoBehaviour, IStunnable
 	// NEW: Animation
 	[Header("Animation")]
 	[SerializeField] private Animator animator;
-	[SerializeField] private string animationParamName = "isMoving"; // Use "Speed" or "Move" if using floats
+	//[SerializeField] private string animationParamName = "isMoving"; // Use "Speed" or "Move" if using floats
 
 	private Rigidbody2D rb;
 	private CircleCollider2D col;
@@ -126,8 +126,8 @@ public class FlyingEnemy : MonoBehaviour, IStunnable
 		isChasing = false;
 
 		// Optional: play a stun animation
-		if (animator != null)
-			animator.SetBool("move", false);
+		//if (animator != null)
+			//animator.SetBool("run", false);
 	}
 	private void IdleHover()
 	{
@@ -208,7 +208,7 @@ public class FlyingEnemy : MonoBehaviour, IStunnable
 			// If using BOOL like "isMoving"
 			else
 			{
-				animator.SetBool(animationParamName, shouldPlayAnimation);
+				//animator.SetBool(animationParamName, shouldPlayAnimation);
 			}
 		}
 	}
