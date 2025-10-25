@@ -11,19 +11,27 @@ public class NPC1 : MonoBehaviour, IInteractable
 	public TMP_Text dialogueText, nameText;
 	public Image portraitImage;
 
+	[Header("NPC Sprites")]
+	public Sprite idleSprite;
+	public Sprite talkingSprite;
+	public SpriteRenderer npcRenderer; // assign your NPC's SpriteRenderer here
+
 	private int dialogueIndex;
 	private bool isTyping, isDialogueActive;
+	public GameObject interactionIcon;
 
-	private CinemachineSwapOnHold camSystem; // reference to camera system
+	private CinemachineSwapOnHold camSystem;
 
 	void Start()
 	{
-		// Find the camera system in the scene
 		camSystem = FindObjectOfType<CinemachineSwapOnHold>();
 
-		// Ensure dialogue panel is hidden at start
 		if (dialoguePanel != null)
 			dialoguePanel.SetActive(false);
+
+		// Ensure the NPC starts with the idle sprite
+		if (npcRenderer != null && idleSprite != null)
+			npcRenderer.sprite = idleSprite;
 	}
 
 	public bool CanInteract() => !isDialogueActive;
@@ -38,7 +46,7 @@ public class NPC1 : MonoBehaviour, IInteractable
 			NextLine();
 		}
 		else
-		{
+		{interactionIcon.SetActive(false);
 			StartDialogue();
 		}
 	}
@@ -55,15 +63,17 @@ public class NPC1 : MonoBehaviour, IInteractable
 		// ✅ Trigger camera zoom-in (which fades)
 		camSystem?.OnInteractionStart();
 
-		// ✅ Wait until fade finishes before showing panel
+		// ✅ Switch NPC sprite to talking
+		if (npcRenderer != null && talkingSprite != null)
+			npcRenderer.sprite = talkingSprite;
+
+		// ✅ Wait until fade finishes before showing dialogue
 		StartCoroutine(ShowDialogueAfterFade());
 	}
 
 	IEnumerator ShowDialogueAfterFade()
 	{
-		// Wait slightly longer than the fade duration (for safety)
 		yield return new WaitForSeconds(camSystem != null ? camSystem.fadeDuration : 0.5f);
-
 		dialoguePanel.SetActive(true);
 		StartCoroutine(TypeLine());
 	}
@@ -115,6 +125,11 @@ public class NPC1 : MonoBehaviour, IInteractable
 		dialoguePanel.SetActive(false);
 		PauseController.setPaused(false);
 
+		// ✅ Switch NPC sprite back to idle
+		if (npcRenderer != null && idleSprite != null)
+			npcRenderer.sprite = idleSprite;
+
+		interactionIcon.SetActive(false);
 		// ✅ Return camera to normal (with fade)
 		camSystem?.OnInteractionEnd();
 	}

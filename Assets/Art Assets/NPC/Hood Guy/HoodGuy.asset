@@ -17,7 +17,9 @@ MonoBehaviour:
   dialogueLines:
   - Ahm...
   - Hello There young Fella
-  autoProgressLines: 0100
+  - I wouldn't go there if I were you
+  - suit yourself
+  autoProgressLines: 01010100
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 30cf309ad7bc22a498c3710693f23efc, type: 3}
