@@ -407,4 +407,17 @@ public class PlayerMovement2D : MonoBehaviour
 			Gizmos.DrawWireCube(groundCheckPoint.position, groundCheckSize);
 		}
 	}
+	//remove this from here after testing
+	private void OnTriggerEnter2D(Collider2D collision){
+		if(collision.gameObject.CompareTag("laser")){
+			Destroy(this.gameObject);
+			Debug.Log("player is dead");
+		}
+	}
+
+
+
+
+
+
 }

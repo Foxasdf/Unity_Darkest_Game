@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+
   - Explosion
   - Enemy
   - NPC
+  - laser
+
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - foreground
   - 
   - 
   - 
@@ -53,6 +56,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 661835453
+    locked: 0
+  - name: foreground
+    uniqueID: 329239859
     locked: 0
   m_RenderingLayers:
   - Default

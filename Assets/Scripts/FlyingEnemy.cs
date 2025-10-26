@@ -200,16 +200,19 @@ public class FlyingEnemy : MonoBehaviour, IStunnable
         
 		if (animator != null)
 		{
+		
 			// If you're using a FLOAT parameter like "Speed"
 			if (animator.parameters.Length > 0 && animator.GetParameter(0).type == AnimatorControllerParameterType.Float)
 			{
 				animator.SetFloat("Speed", currentSpeed); // Adjust in Animator to scale motion
 			}
 			// If using BOOL like "isMoving"
+
 			else
 			{
 				//animator.SetBool(animationParamName, shouldPlayAnimation);
 			}
+
 		}
 	}
 	
