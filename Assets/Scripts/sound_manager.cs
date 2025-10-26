@@ -1,9 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-
-
-
 public enum soundType{
 	flashlight_on,
 	flashlight_off,
@@ -11,8 +8,6 @@ public enum soundType{
 	run,
 	growl
 }
-
-
 
 
 [RequireComponent(typeof(AudioSource)),ExecuteInEditMode]
@@ -31,10 +26,10 @@ public class sound_manager : MonoBehaviour
 	}
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-	    audiosource = GetComponent<AudioSource>();         
-    }
+	void Start()
+	{
+		audiosource = GetComponent<AudioSource>();         
+	}
 	void Update()
 	{
         
@@ -44,22 +39,5 @@ public class sound_manager : MonoBehaviour
 	public static void play_sound(soundType sound,float volume = 1){
 		instance.audiosource.PlayOneShot(instance.soundlist[(int)sound],volume);
 		
-	}   
-	/* #if UNITY_EDITOR    
-	private void on_enable(){
-		string[] names= Enum.GetNames(typeof(soundType));
-		Array.Resize(ref soundlist,names.Length);
-		for (int i = 0; i < soundlist.Length; i++) {
-			soundlist[i].name = names[i];
-		}
-	}
-	#endif*/
-    // Update is called once per frame
-    
+	}       
 }
-/*[Serializable]
-public struct SoundList{
-	[HideInInspector] public String name;
-	[SerializeField] private AudioClip[] sounds;
-}
-*/

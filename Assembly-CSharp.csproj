@@ -125,6 +125,7 @@
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObjectPool.cs" />
+    <Compile Include="Assets\Scripts\laser_beam.cs" />
     <Compile Include="Assets\Scripts\moving_plat.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
     <Compile Include="Assets\Scripts\sound_manager.cs" />
