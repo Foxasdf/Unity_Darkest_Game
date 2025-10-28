@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -8,17 +9,17 @@ public class PlayerMovement2D : MonoBehaviour
 	[SerializeField] private float moveSpeed = 8f;
 	[SerializeField] private float acceleration = 10f;
 	[SerializeField] private float deceleration = 10f;
-	[SerializeField] private float velPower = 0.9f; // Makes movement feel more responsive
+	[SerializeField] private float velPower = 0.9f;
 
 	[Header("Jump Settings")]
 	[SerializeField] private float jumpForce = 15f;
-	[SerializeField] private float jumpCutMultiplier = 0.5f; // For variable jump height
-	[SerializeField] private float coyoteTime = 0.2f; // Grace period for jumping after leaving platform
-	[SerializeField] private float jumpBufferTime = 0.2f; // Jump input buffer
+	[SerializeField] private float jumpCutMultiplier = 0.5f;
+	[SerializeField] private float coyoteTime = 0.2f;
+	[SerializeField] private float jumpBufferTime = 0.2f;
 
 	[Header("Gravity Settings")]
 	[SerializeField] private float gravityScale = 3f;
-	[SerializeField] private float fallGravityMultiplier = 1.5f; // Faster falling
+	[SerializeField] private float fallGravityMultiplier = 1.5f;
 	[SerializeField] private float maxFallSpeed = 20f;
 
 	[Header("Ground Check")]
@@ -27,12 +28,18 @@ public class PlayerMovement2D : MonoBehaviour
 	[SerializeField] private LayerMask groundLayer;
 
 	[Header("Air Movement")]
-	[SerializeField] private float airMultiplier = 0.8f; // Slightly reduced air control
-	[SerializeField] private int maxAirJumps = 1; // Double jump capability
+	[SerializeField] private float airMultiplier = 0.8f;
+	[SerializeField] private int maxAirJumps = 1;
+
+	[Header("Drop Through Platform")]
+	[SerializeField] private float dropThroughDuration = 0.5f;
+	[SerializeField] private KeyCode dropKey = KeyCode.S;
+	[SerializeField] private float downPush = -2f;
 
 	// Components
 	private Rigidbody2D rb;
 	private CapsuleCollider2D col;
+	private PhysicsMaterial2D noFrictionMaterial;
 
 	// Movement variables
 	private float horizontalInput;
@@ -46,8 +53,13 @@ public class PlayerMovement2D : MonoBehaviour
 	private bool isJumping;
 	private bool jumpInputReleased;
 
-	// Platform velocity (for moving platforms)
+	// Platform velocity
 	private Vector2 platformVelocity = Vector2.zero;
+
+	// Drop through - store ALL colliders we're standing on
+	private Collider2D standingOnCollider;
+	private PlatformEffector2D standingOnEffector;
+	private bool isDropping;
 
 	// Optional: For animations
 	public bool IsFacingRight { get; private set; } = true;
@@ -59,6 +71,13 @@ public class PlayerMovement2D : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<CapsuleCollider2D>();
+		
+		// Create no-friction material to prevent sliding
+		noFrictionMaterial = new PhysicsMaterial2D("NoFriction");
+		noFrictionMaterial.friction = 0f;
+		noFrictionMaterial.bounciness = 0f;
+		
+		col.sharedMaterial = noFrictionMaterial;
 	}
 
 	private void Start()
@@ -67,7 +86,6 @@ public class PlayerMovement2D : MonoBehaviour
 		rb.freezeRotation = true;
 		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-		// Create ground check point if not assigned
 		if (groundCheckPoint == null)
 		{
 			GameObject groundCheck = new GameObject("GroundCheck");
@@ -79,13 +97,27 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void Update()
 	{
-		// Get input
 		horizontalInput = Input.GetAxisRaw("Horizontal");
 
-		// Ground check
+		// Check for drop-through input
+		if (Input.GetKeyDown(dropKey) && isGrounded)
+		{
+			// Check what we're standing on
+			CheckPlatformBelow();
+			
+			if (standingOnEffector != null)
+			{
+				Debug.Log($"Dropping through platform with effector!");
+				StartCoroutine(DropThroughPlatform());
+			}
+			else
+			{
+				Debug.Log("No platform effector found below");
+			}
+		}
+
 		CheckGrounded();
 
-		// Handle coyote time
 		if (isGrounded)
 		{
 			coyoteTimeCounter = coyoteTime;
@@ -96,7 +128,6 @@ public class PlayerMovement2D : MonoBehaviour
 			coyoteTimeCounter -= Time.deltaTime;
 		}
 
-		// Handle jump buffer
 		if (Input.GetButtonDown("Jump"))
 		{
 			jumpBufferCounter = jumpBufferTime;
@@ -106,13 +137,9 @@ public class PlayerMovement2D : MonoBehaviour
 			jumpBufferCounter -= Time.deltaTime;
 		}
 
-		// Handle jump
 		HandleJump();
-
-		// Handle sprite flipping
 		HandleSpriteFlip();
 
-		// Track jump input release for variable jump height
 		if (Input.GetButtonUp("Jump"))
 		{
 			jumpInputReleased = true;
@@ -121,49 +148,150 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		// Handle horizontal movement
 		HandleMovement();
-
-		// Apply gravity modifications
 		ApplyGravityModifiers();
 
-		// Clamp fall speed
 		if (rb.linearVelocity.y < -maxFallSpeed)
 		{
 			rb.linearVelocity = new Vector2(rb.linearVelocity.x, -maxFallSpeed);
 		}
 	}
 
+	private void CheckPlatformBelow()
+	{
+		// Check what's directly below the player
+		RaycastHit2D[] hits = Physics2D.BoxCastAll(
+			groundCheckPoint.position, 
+			groundCheckSize, 
+			0f, 
+			Vector2.down, 
+			0.1f, 
+			groundLayer
+		);
+
+		standingOnCollider = null;
+		standingOnEffector = null;
+
+		foreach (RaycastHit2D hit in hits)
+		{
+			if (hit.collider != null && hit.collider != col)
+			{
+				// Check for platform effector on the hit object
+				PlatformEffector2D effector = hit.collider.GetComponent<PlatformEffector2D>();
+				
+				// If not found, check in parent
+				if (effector == null)
+				{
+					effector = hit.collider.GetComponentInParent<PlatformEffector2D>();
+				}
+				
+				// If not found, check in children
+				if (effector == null)
+				{
+					effector = hit.collider.GetComponentInChildren<PlatformEffector2D>();
+				}
+
+				if (effector != null)
+				{
+					standingOnCollider = hit.collider;
+					standingOnEffector = effector;
+					Debug.Log($"Found platform effector on: {effector.gameObject.name}, collider on: {hit.collider.gameObject.name}");
+					break;
+				}
+			}
+		}
+	}
+
+	private IEnumerator DropThroughPlatform()
+	{
+		if (standingOnCollider == null)
+		{
+			Debug.LogWarning("No collider to drop through!");
+			yield break;
+		}
+
+		isDropping = true;
+		
+		// Find ALL colliders associated with the platform (including composite colliders)
+		Collider2D[] platformColliders = standingOnEffector.gameObject.GetComponents<Collider2D>();
+		
+		// Also check parent and children
+		if (platformColliders.Length == 0)
+		{
+			platformColliders = standingOnEffector.GetComponentsInChildren<Collider2D>();
+		}
+		
+		if (platformColliders.Length == 0)
+		{
+			platformColliders = standingOnEffector.GetComponentsInParent<Collider2D>();
+		}
+
+		Debug.Log($"Disabling collision with {platformColliders.Length} colliders");
+
+		// Disable collision with ALL platform colliders
+		foreach (Collider2D platformCol in platformColliders)
+		{
+			if (platformCol != null)
+			{
+				Physics2D.IgnoreCollision(col, platformCol, true);
+				Debug.Log($"Ignoring collision with: {platformCol.gameObject.name}");
+			}
+		}
+
+		// Also ignore the specific collider we detected
+		if (standingOnCollider != null)
+		{
+			Physics2D.IgnoreCollision(col, standingOnCollider, true);
+		}
+
+		// Clear platform velocity
+		ClearPlatformVelocity();
+		
+		// Push player down
+		rb.linearVelocity = new Vector2(rb.linearVelocity.x, -downPush);
+
+		// Wait for drop duration
+		yield return new WaitForSeconds(dropThroughDuration);
+
+		// Re-enable collision with ALL platform colliders
+		foreach (Collider2D platformCol in platformColliders)
+		{
+			if (platformCol != null)
+			{
+				Physics2D.IgnoreCollision(col, platformCol, false);
+			}
+		}
+
+		if (standingOnCollider != null)
+		{
+			Physics2D.IgnoreCollision(col, standingOnCollider, false);
+		}
+
+		isDropping = false;
+		standingOnCollider = null;
+		standingOnEffector = null;
+		
+		Debug.Log("Drop through complete - collisions re-enabled");
+	}
+
 	private void HandleMovement()
 	{
-		// Base target speed from input
 		float targetSpeed = horizontalInput * moveSpeed;
-
-		// Add platform's horizontal velocity to maintain sync
 		targetSpeed += platformVelocity.x;
-
-		// Calculate speed difference
 		float speedDiff = targetSpeed - rb.linearVelocity.x;
-
-		// Determine acceleration rate
 		float accelRate = (Mathf.Abs(horizontalInput) > 0.01f) ? acceleration : deceleration;
 
-		// Apply air multiplier if in air
 		if (!isGrounded)
 		{
 			accelRate *= airMultiplier;
 		}
 
-		// Calculate movement with velPower for better feel
 		float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, velPower) * Mathf.Sign(speedDiff);
-
-		// Apply force
 		rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
 	}
 
 	private void HandleJump()
 	{
-		// Check if we should jump (with buffer and coyote time)
 		bool canJump = (coyoteTimeCounter > 0f || airJumpsRemaining > 0) && jumpBufferCounter > 0f;
 
 		if (canJump)
@@ -171,7 +299,6 @@ public class PlayerMovement2D : MonoBehaviour
 			Jump();
 		}
 
-		// Variable jump height - reduce velocity when jump button is released
 		if (jumpInputReleased && rb.linearVelocity.y > 0 && isJumping)
 		{
 			rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
@@ -181,16 +308,12 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void Jump()
 	{
-		// If we're using an air jump
 		if (coyoteTimeCounter <= 0f && !isGrounded)
 		{
 			airJumpsRemaining--;
 		}
 
-		// Apply jump velocity
 		rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-
-		// Reset counters
 		jumpBufferCounter = 0f;
 		coyoteTimeCounter = 0f;
 		isJumping = true;
@@ -199,7 +322,6 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void ApplyGravityModifiers()
 	{
-		// Apply different gravity when falling for better game feel
 		if (rb.linearVelocity.y < 0)
 		{
 			rb.gravityScale = gravityScale * fallGravityMultiplier;
@@ -218,11 +340,8 @@ public class PlayerMovement2D : MonoBehaviour
 	private void CheckGrounded()
 	{
 		wasGrounded = isGrounded;
-
-		// Box cast for ground detection
 		isGrounded = Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0f, groundLayer);
 
-		// Landing
 		if (!wasGrounded && isGrounded)
 		{
 			OnLand();
@@ -255,35 +374,31 @@ public class PlayerMovement2D : MonoBehaviour
 		transform.localScale = scale;
 	}
 
-	// Called by moving platform when player is on it
 	public void SetPlatformVelocity(Vector2 vel)
 	{
 		platformVelocity = vel;
 	}
 
-	// Called by moving platform when player leaves it
 	public void ClearPlatformVelocity()
 	{
 		platformVelocity = Vector2.zero;
 	}
 
-	// Optional: For one-way platforms
 	public void DisableCollisionForPlatform(float duration = 0.5f)
 	{
 		StartCoroutine(DisableCollision(duration));
 	}
 
-	private System.Collections.IEnumerator DisableCollision(float duration)
+	private IEnumerator DisableCollision(float duration)
 	{
-		int platformLayer = LayerMask.NameToLayer("OneWayPlatform");
-		if (platformLayer == -1) yield break; // Layer doesn't exist
+		int platformLayerIndex = LayerMask.NameToLayer("OneWayPlatform");
+		if (platformLayerIndex == -1) yield break;
 
-		Physics2D.IgnoreLayerCollision(gameObject.layer, platformLayer, true);
+		Physics2D.IgnoreLayerCollision(gameObject.layer, platformLayerIndex, true);
 		yield return new WaitForSeconds(duration);
-		Physics2D.IgnoreLayerCollision(gameObject.layer, platformLayer, false);
+		Physics2D.IgnoreLayerCollision(gameObject.layer, platformLayerIndex, false);
 	}
 
-	// Debug visualization
 	private void OnDrawGizmosSelected()
 	{
 		if (groundCheckPoint != null)

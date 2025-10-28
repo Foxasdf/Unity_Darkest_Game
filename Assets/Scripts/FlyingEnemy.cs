@@ -2,7 +2,8 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class FlyingEnemy : MonoBehaviour
+public class FlyingEnemy : MonoBehaviour, IStunnable
+
 {
 	[Header("Idle Settings")]
 	[SerializeField] private float idleHoverSpeed = 1f;
@@ -21,7 +22,7 @@ public class FlyingEnemy : MonoBehaviour
 	// NEW: Animation
 	[Header("Animation")]
 	[SerializeField] private Animator animator;
-	[SerializeField] private string animationParamName = "isMoving"; // Use "Speed" or "Move" if using floats
+	//[SerializeField] private string animationParamName = "isMoving"; // Use "Speed" or "Move" if using floats
 
 	private Rigidbody2D rb;
 	private CircleCollider2D col;
@@ -35,6 +36,10 @@ public class FlyingEnemy : MonoBehaviour
 	// Idle hover
 	private Vector3 startPosition;
 	private float hoverOffset;
+	
+	//Stun
+	private bool isStunned = false;
+	private float stunTimer = 0f;
 	
 	private void Awake()
 	{
@@ -73,6 +78,17 @@ public class FlyingEnemy : MonoBehaviour
 	
 	private void FixedUpdate()
 	{
+		
+		if (isStunned)
+		{
+			stunTimer -= Time.fixedDeltaTime;
+			if (stunTimer <= 0f)
+			{
+				isStunned = false;
+				hasBeenSpotted = false; // 👈 allow flashlight to trigger again
+			}
+			return; // skip normal movement while stunned
+		}
 		// Check if flashlight is pointing at us
 		if (!hasBeenSpotted && flashlight != null)
 		{
@@ -97,6 +113,22 @@ public class FlyingEnemy : MonoBehaviour
 		UpdateAnimation();
 	}
 	
+	public void Stun(float duration)
+	{
+		if (isStunned) return; // already stunned
+		isStunned = true;
+		stunTimer = duration;
+
+		// Stop movement
+		rb.linearVelocity = Vector2.zero;
+
+		// Stop chasing the player
+		isChasing = false;
+
+		// Optional: play a stun animation
+		//if (animator != null)
+			//animator.SetBool("run", false);
+	}
 	private void IdleHover()
 	{
 		hoverOffset += Time.fixedDeltaTime * idleHoverSpeed;
@@ -175,7 +207,7 @@ public class FlyingEnemy : MonoBehaviour
 				animator.SetFloat("Speed", currentSpeed); // Adjust in Animator to scale motion
 			}
 			// If using BOOL like "isMoving"
-		
+
 		}
 	}
 	

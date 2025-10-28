@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class SimpleEnemyPatrol : MonoBehaviour
+public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 {
 	[Header("Patrol Settings")]
 	[SerializeField] private Transform leftPoint;
@@ -37,6 +37,10 @@ public class SimpleEnemyPatrol : MonoBehaviour
     
 	// Animation parameter name (optional: use string const for safety)
 	private static readonly string MOVE_ANIM_PARAM = "move";
+	//Stun
+	private bool isStunned = false;
+	private float stunTimer = 0f;
+
 
 	private void Awake()
 	{
@@ -89,26 +93,45 @@ public class SimpleEnemyPatrol : MonoBehaviour
     
 	private void FixedUpdate()
 	{
-		// Check if we should start chasing
-		if (!isChasing)
+		if (isStunned)
 		{
-			CheckForFlashlight();
-		}
-		
-		// Move based on state
-		if (isChasing)
-		{
-			ChasePlayer();
-		}
-		else
-		{
-			Patrol();
+			stunTimer -= Time.fixedDeltaTime;
+			if (stunTimer <= 0f)
+			{
+				isStunned = false;
+			}
+			return; // skip normal movement while stunned
 		}
 
-		// NEW: Update animation based on movement
+		// Normal behavior
+		if (!isChasing)
+			CheckForFlashlight();
+
+		if (isChasing)
+			ChasePlayer();
+		else
+			Patrol();
+
 		UpdateAnimation();
 	}
 	
+	public void Stun(float duration)
+	{
+		if (isStunned) return; // already stunned
+		isStunned = true;
+		stunTimer = duration;
+
+		// Stop movement
+		rb.linearVelocity = Vector2.zero;
+
+		// Stop chasing the player
+		isChasing = false;
+
+		// Optional: play a stun animation
+		if (animator != null)
+			animator.SetBool("move", false);
+	}
+
 	private void CheckForFlashlight()
 	{
 		if (playerTransform == null || flashlight == null)
