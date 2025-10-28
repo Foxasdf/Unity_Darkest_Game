@@ -225,4 +225,43 @@ public class SimpleEnemyPatrol : MonoBehaviour
 			Gizmos.DrawLine(leftRange, rightRange);
 		}
 	}
+	
+	
+	private bool IsVisibleToPlayer()
+	{
+		if (playerTransform == null) return false;
+
+		// Direction from player to enemy
+		Vector2 direction = transform.position - playerTransform.position;
+		float distance = direction.magnitude;
+
+		// Raycast from player toward enemy
+		RaycastHit2D hit = Physics2D.Raycast(
+			playerTransform.position,
+			direction.normalized,
+			distance,
+			~LayerMask.GetMask("Player", "Enemy") // Ignore player/enemy layers
+		);
+
+		// If ray hits something BEFORE the enemy → enemy is hidden
+		if (hit.collider != null)
+		{
+			return false; // Blocked by wall/object
+		}
+
+		// Optional: Also check if enemy is on screen
+		Camera cam = Camera.main;
+		if (cam != null)
+		{
+			Vector3 viewportPos = cam.WorldToViewportPoint(transform.position);
+			bool onScreen = 
+				viewportPos.x >= 0 && viewportPos.x <= 1 &&
+				viewportPos.y >= 0 && viewportPos.y <= 1 &&
+				viewportPos.z > 0;
+			if (!onScreen)
+				return false; // Off-screen
+		}
+
+		return true; // Fully visible
+	}
 }
