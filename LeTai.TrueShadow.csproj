@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9284FD6D-D5DF-6581-E9D2-B3F408B0D07D}</ProjectGuid>
+    <ProjectGuid>{38354980-AB3B-F5C4-E6D7-DA7E0BABE354}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>LeTai.TrueShadow</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -61,126 +61,57 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo1_SimpleGameObjectPool\Scripts\Demo1Manager.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Elevator.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxAttribute.cs" />
-    <Compile Include="Assets\Scripts\player_move.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolInfo.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObject.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
-    <Compile Include="Assets\Scripts\PauseController.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4RecyclableBall.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolBase.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInPlayModeAttribute.cs" />
-    <Compile Include="Assets\Scripts\play_footsteps.cs" />
-    <Compile Include="Assets\Scripts\NPCDialogue.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideLabelAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\RequiredAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGOPoolKit.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\SimpleGOPoolKit.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GroupAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IAbstractPool.cs" />
-    <Compile Include="Assets\Scripts\InteractionDetector.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Enum.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGameObjectPool.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IRecyclablePool.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableGOPoolManagerBase.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowInInspectorAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\SectionHeaderAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolConfig.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BoxGroupAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelTextAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\ObjectPool\RecyclableObjectPoolViewer.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\AssetsOnlyAttribute.cs" />
-    <Compile Include="Assets\Scripts\CameraSwapController.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\BlockquoteAttribute.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\BoundingPlatform.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\PoolParamTypes.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableMonoBehaviour.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\DemoRecyclableBall.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
-    <Compile Include="Assets\playsoundEnter.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\Demo3Manager.cs" />
-    <Compile Include="Assets\Scripts\IInteractable.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TitleHeaderAttribute.cs" />
-    <Compile Include="Assets\Cainos\Common\Script\Utils\SecondOrderDynamics.cs" />
-    <Compile Include="Assets\Scripts\ExplosionAnimationEvents.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\EnableIfAttribute.cs" />
-    <Compile Include="Assets\Scripts\destroy_prefab.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4Manager.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableLucidEditorAttribute.cs" />
-    <Compile Include="Assets\Scripts\FlyingEnemy.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HelpBoxIfAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\IRecyclable.cs" />
-    <Compile Include="Assets\Scripts\Enemy_mov1.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ShowIfAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\DemoSoundObject.cs" />
-    <Compile Include="Assets\Scripts\FlashlightController.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\IndentAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ButtonAttribute.cs" />
-    <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\Chest.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecycleObjectType.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\GUIColorAttribute.cs" />
-    <Compile Include="Assets\Scripts\NPC1.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Common\ObjectPoolKit.cs" />
-    <Compile Include="Assets\Scripts\IStunnable.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\ISimpleGameObjectPool.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo2_ObjectReferencePool\Scripts\Demo2Manager.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableEventArgs.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\OnValueChangedAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ReadOnlyAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\DemoHitText.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\PropertyGroupAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalGroupAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObjectPool.cs" />
-    <Compile Include="Assets\Scripts\laser_beam.cs" />
-    <Compile Include="Assets\Scripts\moving_plat.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableIfAttribute.cs" />
-    <Compile Include="Assets\Scripts\sound_manager.cs" />
-    <Compile Include="Assets\Scripts\Mine.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideMonoScript.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\TabGroupAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4HitText.cs" />
-    <Compile Include="Assets\Scripts\CameraShakeTrigger.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\DisableInEditModeAttribute.cs" />
-    <Compile Include="Assets\Scripts\LightActivatedMovingPlatform.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\ValidateInputAttribute.cs" />
-    <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\SimpleGOPool\SimpleGameObjectPool.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\LabelWidthAttribute.cs" />
-    <Compile Include="Assets\Scripts\ExplosionStunArea.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HorizontalLineAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\PropertyOrderAttribute.cs" />
-    <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\FoldoutGroupAttribute.cs" />
-    <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\BlurConfig.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ShadowRenderer.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\Resources.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\IBlurAlgorithm.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\HashCode.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Helper\TrueShadowDisableCache.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\ExtensionMethods.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\SpreadSliderAttribute.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Structure\BlendMode.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\TrueShadow.Plugins.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\ObjectHandle.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\QuickPreset.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Structure\ShadowContainer.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ShadowSettingSnapshot.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ProjectSettings.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ShadowSorter.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\ScalableBlurConfig.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\ScalableBlur.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\ShaderProperties.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Helper\TrueShadowInsetOnPress.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Helper\TrueShadowCustomMaterial.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ShadowRenderer.MaskHandling.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\TrueShadow.Invalidator.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\PluginInterfaces.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\ShaderID.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\Utility.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Helper\AnimatedBiStateButton.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Shims.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\PropertyDrawerAttributes.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\TrueShadow.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Effects\BlurHQ.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\Math.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\ShadowFactory.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Helper\TrueShadowInteractionAnimation.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\DebugSettings.cs" />
+    <Compile Include="Assets\Le Tai&apos;s Asset\TrueShadow\Scripts\Utilities\IndexedSet.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Cainos\Third Party\Lucid Editor\License.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\Cainos\Pixel Art Platformer - Village Props\Changelog.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Art Assets\Pixel Art Platformer - Village Props v2.3.0\Changelog.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Art Assets\Steven01\Read me.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\ShadowGenerate.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\TrueShadow-Screen.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Online Documentation (Recommended).txt" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\ShadowPostProcess.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\TrueShadow-Multiply.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\TrueShadow.cginc" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\changelog.txt" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\ImprintPostProcess.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\ShadowCutout.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\ShadowGenerateHQ.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\TrueShadow-Normal.shader" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\LeTai.TrueShadow.asmdef" />
+    <None Include="Assets\Le Tai&apos;s Asset\TrueShadow\Resources\Shaders\TrueShadow-Additive.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -671,6 +602,22 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UWP.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
@@ -679,12 +626,36 @@
       <HintPath>Library\PackageCache\com.unity.ext.nunit@031a54704bff\net40\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad\Lib\Editor\log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad\Lib\Editor\unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.IO.Hashing\System.IO.Hashing.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@6279e2b7c485\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
@@ -1183,288 +1154,20 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Path.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Splines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Cinemachine.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Cinemachine.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Common">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Unity.Cinemachine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Rendering.LightTransport.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rendering.LightTransport.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Multiplayer.Center.Common">
-      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Center.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Multiplayer.Center.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Multiplayer.Center.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Rendering.LightTransport.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Rendering.LightTransport.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Collections.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.AIIntegration.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.AIIntegration.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor.Shared">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.Shared.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Settings.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Settings.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Splines">
-      <HintPath>Library\ScriptAssemblies\Unity.Splines.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
-      <Project>{82D37AF2-099E-E23C-1259-EDD962963B14}</Project>
-      <Name>LeTai.TrueShadow.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.csproj">
-      <Project>{38354980-AB3B-F5C4-E6D7-DA7E0BABE354}</Project>
-      <Name>LeTai.TrueShadow</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TrueShadow.Editor.csproj">
-      <Project>{2A9FABA1-B106-E2FC-96FC-4CA89BA02A72}</Project>
-      <Name>LeTai.TrueShadow.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
