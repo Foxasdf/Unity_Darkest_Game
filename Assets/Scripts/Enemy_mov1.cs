@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
+public class SimpleEnemyPatrol : MonoBehaviour, IStunnable
 {
 	[Header("Patrol Settings")]
 	[SerializeField] private Transform leftPoint;
@@ -11,14 +11,13 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 	
 	[Header("Chase Settings")]
 	[SerializeField] private float chaseSpeed = 6f;
-	[SerializeField] private float detectionRangeX = 15f; // Horizontal detection range
+	[SerializeField] private float detectionRangeX = 15f;
 	[SerializeField] private LayerMask playerLayer;
 	[SerializeField] private bool showDetectionRange = true;
     
 	[Header("Player Detection")]
 	[SerializeField] private float knockbackForce = 10f;
     
-	// NEW: Reference to Animator
 	[Header("Animation")]
 	[SerializeField] private Animator animator;
 
@@ -26,34 +25,26 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 	private CapsuleCollider2D col;
 	private bool movingRight = true;
 	
-	// Store world positions at start
 	private float leftBoundary;
 	private float rightBoundary;
 	
-	// Chase system
 	private bool isChasing = false;
 	private Transform playerTransform;
 	private FlashlightController flashlight;
     
-	// Animation parameter name (optional: use string const for safety)
 	private static readonly string MOVE_ANIM_PARAM = "move";
-	//Stun
 	private bool isStunned = false;
 	private float stunTimer = 0f;
-
 
 	private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<CapsuleCollider2D>();
-
-		// NEW: Cache Animator (could be null if not assigned)
-		animator = GetComponent<Animator>(); // Often on same object as SpriteRenderer
+		animator = GetComponent<Animator>();
 	}
     
 	private void Start()
 	{
-		// Configure Rigidbody2D
 		rb.bodyType = RigidbodyType2D.Dynamic;
 		rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 		rb.freezeRotation = true;
@@ -61,7 +52,6 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 		rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         
-		// Validate patrol points
 		if (leftPoint == null || rightPoint == null)
 		{
 			Debug.LogError($"Patrol points not assigned on {gameObject.name}!");
@@ -69,11 +59,9 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 			return;
 		}
 		
-		// Store the world positions at start so child objects don't affect patrol
 		leftBoundary = leftPoint.position.x;
 		rightBoundary = rightPoint.position.x;
 		
-		// Make sure left is actually left of right
 		if (leftBoundary > rightBoundary)
 		{
 			float temp = leftBoundary;
@@ -82,7 +70,6 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 			Debug.LogWarning($"Left and Right points were swapped on {gameObject.name}");
 		}
 		
-		// Find player
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		if (player != null)
 		{
@@ -100,10 +87,9 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 			{
 				isStunned = false;
 			}
-			return; // skip normal movement while stunned
+			return;
 		}
 
-		// Normal behavior
 		if (!isChasing)
 			CheckForFlashlight();
 
@@ -117,17 +103,13 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 	
 	public void Stun(float duration)
 	{
-		if (isStunned) return; // already stunned
+		if (isStunned) return;
 		isStunned = true;
 		stunTimer = duration;
 
-		// Stop movement
 		rb.linearVelocity = Vector2.zero;
-
-		// Stop chasing the player
 		isChasing = false;
 
-		// Optional: play a stun animation
 		if (animator != null)
 			animator.SetBool("move", false);
 	}
@@ -158,12 +140,12 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 		if (movingRight && transform.position.x >= rightBoundary)
 		{
 			movingRight = false;
-			FlipSprite(); // Optional: flip sprite when turning
+			FlipSprite();
 		}
 		else if (!movingRight && transform.position.x <= leftBoundary)
 		{
 			movingRight = true;
-			FlipSprite(); // Optional: flip sprite when turning
+			FlipSprite();
 		}
 	}
 	
@@ -181,27 +163,22 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 		rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
 	}
 
-	// NEW: Update animation parameter
 	private void UpdateAnimation()
 	{
-		// If velocity is non-zero on X, then enemy is moving
 		bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
 
-		// Set the 'move' parameter in Animator
 		if (animator != null)
 		{
 			animator.SetBool(MOVE_ANIM_PARAM, isMoving);
 		}
 	}
 
-	// Optional: Flip sprite when changing direction
 	private void FlipSprite()
 	{
 		if (animator == null) return;
 
-		// Scale x to -1 to flip, back to 1 to un-flip
 		Vector3 scale = transform.localScale;
-		scale.x *= -1; // Reverse X scale
+		scale.x *= -1;
 		transform.localScale = scale;
 	}
     
@@ -209,8 +186,15 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 	{
 		if (collision.gameObject.CompareTag("Player"))
 		{
+			// Trigger death through PlayerDeathHandler
+			PlayerDeathHandler deathHandler = collision.gameObject.GetComponent<PlayerDeathHandler>();
+			if (deathHandler != null)
+			{
+				deathHandler.TriggerDeath(DeathType.Enemy);
+			}
+			
+			// Apply knockback
 			Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
-            
 			if (playerRb != null)
 			{
 				Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
@@ -249,30 +233,25 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 		}
 	}
 	
-	
 	private bool IsVisibleToPlayer()
 	{
 		if (playerTransform == null) return false;
 
-		// Direction from player to enemy
 		Vector2 direction = transform.position - playerTransform.position;
 		float distance = direction.magnitude;
 
-		// Raycast from player toward enemy
 		RaycastHit2D hit = Physics2D.Raycast(
 			playerTransform.position,
 			direction.normalized,
 			distance,
-			~LayerMask.GetMask("Player", "Enemy") // Ignore player/enemy layers
+			~LayerMask.GetMask("Player", "Enemy")
 		);
 
-		// If ray hits something BEFORE the enemy → enemy is hidden
 		if (hit.collider != null)
 		{
-			return false; // Blocked by wall/object
+			return false;
 		}
 
-		// Optional: Also check if enemy is on screen
 		Camera cam = Camera.main;
 		if (cam != null)
 		{
@@ -282,9 +261,9 @@ public class SimpleEnemyPatrol : MonoBehaviour,IStunnable
 				viewportPos.y >= 0 && viewportPos.y <= 1 &&
 				viewportPos.z > 0;
 			if (!onScreen)
-				return false; // Off-screen
+				return false;
 		}
 
-		return true; // Fully visible
+		return true;
 	}
 }
