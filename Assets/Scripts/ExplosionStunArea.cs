@@ -19,16 +19,38 @@ public class ExplosionStunArea : MonoBehaviour
 
 	void Start()
 	{
+		// Use OverlapCircle to detect what's in range at spawn
+		CheckExplosionRadius();
 		Destroy(gameObject, lifetime);
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void CheckExplosionRadius()
 	{
-		// Find any component on this object that implements IStunnable
-		IStunnable stunnable = other.GetComponent<IStunnable>();
-		if (stunnable != null)
+		// Get all colliders within the explosion radius
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, stunRadius);
+
+		foreach (Collider2D hit in hitColliders)
 		{
-			stunnable.Stun(stunDuration);
+			// Skip self
+			if (hit.gameObject == gameObject) continue;
+
+			// Check if it's the player first - kill them
+			if (hit.CompareTag("Player"))
+			{
+				PlayerDeathHandler pdh = hit.GetComponent<PlayerDeathHandler>();
+				if (pdh != null)
+				{
+					pdh.TriggerDeath(DeathType.Mine);
+				}
+				continue; // Don't stun the player, they're dead
+			}
+
+			// Otherwise, check for stunnable enemies
+			IStunnable stunnable = hit.GetComponent<IStunnable>();
+			if (stunnable != null)
+			{
+				stunnable.Stun(stunDuration);
+			}
 		}
 	}
 

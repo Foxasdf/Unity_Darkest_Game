@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ae75b2ab380514494551d7652a8b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  stunRadius: 6.39
-  stunDuration: 3.99
+  stunRadius: 6.07
+  stunDuration: 3.59
   lifetime: 0.2
 --- !u!58 &1575395555085565017
 CircleCollider2D:
@@ -178,8 +178,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.010878018, y: 0}
+  m_Radius: 0.19813749
 --- !u!1 &7234457864972759535
 GameObject:
   m_ObjectHideFlags: 0

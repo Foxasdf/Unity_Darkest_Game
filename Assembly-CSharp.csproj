@@ -101,6 +101,7 @@
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Unity\RecyclableGOPool\RecyclableMonoBehaviour.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\DemoRecyclableBall.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Platformer - Village Props\Script\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\ExplosionDamage.cs" />
     <Compile Include="Assets\playsoundEnter.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo3_RecyclableGameObjectPool\Scripts\Demo3Manager.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
