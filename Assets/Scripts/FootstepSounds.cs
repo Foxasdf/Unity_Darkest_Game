@@ -12,6 +12,9 @@ public class FootstepSounds : MonoBehaviour
 	{
 		if (footstepSounds.Length == 0) return;
         
+		// Randomize pitch for variation
+		audioSource.pitch = Random.Range(0.09f, 0.15f);
+		
 		// Play a random footstep sound
 		AudioClip clip = footstepSounds[Random.Range(0, footstepSounds.Length)];
 		audioSource.PlayOneShot(clip);
@@ -21,6 +24,9 @@ public class FootstepSounds : MonoBehaviour
 	public void PlayFootstepSequential()
 	{
 		if (footstepSounds.Length == 0) return;
+		
+		// Randomize pitch for variation
+		audioSource.pitch = Random.Range(0.09f, 0.15f);
         
 		audioSource.PlayOneShot(footstepSounds[currentStepIndex]);
 		currentStepIndex = (currentStepIndex + 1) % footstepSounds.Length;

@@ -115,24 +115,35 @@ public class FlashlightController : MonoBehaviour
 	private void TurnOnFlashlight()
 	{
 		isFlashlightOn = true;
+
 		if (flashlight != null)
 			flashlight.enabled = true;
 		if (flashlightSprite != null)
 			flashlightSprite.enabled = true;
-		//sound_manager.play_sound(soundType.flashlight_on);
-		//PlaySound(turnOnSound); // Only play "on" sound
+
+		// Play ON sound with random pitch
+		if (audioSource != null && turnOnSound != null)
+		{
+			audioSource.pitch = Random.Range(0.9f, 1.1f);
+			PlaySound(turnOnSound);
+		}
 	}
 
 	private void TurnOffFlashlight()
 	{
 		isFlashlightOn = false;
+
 		if (flashlight != null)
 			flashlight.enabled = false;
 		if (flashlightSprite != null)
 			flashlightSprite.enabled = false;
-		
-		//sound_manager.play_sound(soundType.flashlight_off);
-		//PlaySound(turnOffSound); // Only play "off" sound
+
+		// Play OFF sound with random pitch
+		if (audioSource != null && turnOffSound != null)
+		{
+			audioSource.pitch = Random.Range(0.9f, 1.1f);
+			PlaySound(turnOffSound);
+		}
 	}
 
 	// Helper to play any sound safely
