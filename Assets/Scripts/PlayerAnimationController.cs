@@ -131,8 +131,8 @@ public class PlayerAnimationController : MonoBehaviour
 			animator.speed = 1f;
 		}
 		
-		// Play the animation with crossfade for smooth transitions
-		animator.CrossFade(stateHash, 0.1f, 0);
+		// Play instantly with no crossfade - changed from CrossFade to Play
+		animator.Play(stateHash, 0, 0f);
 	}
     
 	// Optional: Public methods for external control

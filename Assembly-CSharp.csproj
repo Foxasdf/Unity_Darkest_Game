@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\player_move.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclablePoolInfo.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Scripts\Core\RecyclableObject.cs" />
+    <Compile Include="Assets\Scripts\music_manager.cs" />
     <Compile Include="Assets\Cainos\Third Party\Lucid Editor\Runtime\Attributes\HideIfAttribute.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\18KFun\EasyPoolKit\Demos\Demo4_Advanced_Sound\Scripts\Demo4RecyclableBall.cs" />
