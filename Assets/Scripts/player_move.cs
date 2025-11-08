@@ -61,6 +61,10 @@ public class PlayerMovement2D : MonoBehaviour
 	private PlatformEffector2D standingOnEffector;
 	private bool isDropping;
 
+	// Pause state
+	private Vector2 velocityBeforePause;
+	private float gravityScaleBeforePause;
+
 	// Optional: For animations
 	public bool IsFacingRight { get; private set; } = true;
 	public bool IsMoving => Mathf.Abs(rb.linearVelocity.x) > 0.01f;
@@ -97,6 +101,12 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void Update()
 	{
+		// Don't process input when paused
+		if (PauseController.isGamePaused)
+		{
+			return;
+		}
+		
 		horizontalInput = Input.GetAxisRaw("Horizontal");
 
 		// Check for drop-through input
@@ -148,6 +158,28 @@ public class PlayerMovement2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		// Freeze physics when paused
+		if (PauseController.isGamePaused)
+		{
+			// Store current velocity and freeze the rigidbody
+			if (rb.linearVelocity != Vector2.zero)
+			{
+				velocityBeforePause = rb.linearVelocity;
+				gravityScaleBeforePause = rb.gravityScale;
+				rb.linearVelocity = Vector2.zero;
+				rb.gravityScale = 0f;
+			}
+			return;
+		}
+		else
+		{
+			// Restore gravity when unpaused (velocity will naturally resume)
+			if (rb.gravityScale == 0f)
+			{
+				rb.gravityScale = gravityScaleBeforePause;
+			}
+		}
+
 		HandleMovement();
 		ApplyGravityModifiers();
 
@@ -407,17 +439,14 @@ public class PlayerMovement2D : MonoBehaviour
 			Gizmos.DrawWireCube(groundCheckPoint.position, groundCheckSize);
 		}
 	}
+	
 	//remove this from here after testing
-	private void OnTriggerEnter2D(Collider2D collision){
-		if(collision.gameObject.CompareTag("laser")){
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.gameObject.CompareTag("laser"))
+		{
 			Destroy(this.gameObject);
 			Debug.Log("player is dead");
 		}
 	}
-
-
-
-
-
-
 }

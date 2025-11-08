@@ -40,6 +40,7 @@ public class FlashlightController : MonoBehaviour
 	private Transform playerTransform;
 	private float targetAngle;
 	private float currentAngle;
+	private bool wasPausedLastFrame = false;
 	
 	void Start()
 	{
@@ -77,6 +78,20 @@ public class FlashlightController : MonoBehaviour
 	
 	void Update()
 	{
+		// Handle pause state
+		if (PauseController.isGamePaused)
+		{
+			// If just paused and flashlight is on, turn it off
+			if (!wasPausedLastFrame && isFlashlightOn)
+			{
+				TurnOffFlashlight();
+			}
+			wasPausedLastFrame = true;
+			return; // Don't process any input while paused
+		}
+		
+		wasPausedLastFrame = false;
+		
 		HandleFlashlightToggle();
         
 		if (isFlashlightOn)
@@ -89,25 +104,35 @@ public class FlashlightController : MonoBehaviour
 	{
 		if (Input.GetKeyDown(toggleKey))
 		{
-			isFlashlightOn = true;
-			if (flashlight != null)
-				flashlight.enabled = true;
-			if (flashlightSprite != null)
-				flashlightSprite.enabled = true;
-			//sound_manager.play_sound(soundType.flashlight_on);
-			//PlaySound(turnOnSound); // Only play "on" sound
+			TurnOnFlashlight();
 		}
 		else if (Input.GetKeyUp(toggleKey))
 		{
-			isFlashlightOn = false;
-			if (flashlight != null)
-				flashlight.enabled = false;
-			if (flashlightSprite != null)
-				flashlightSprite.enabled = false;
-			
-			//sound_manager.play_sound(soundType.flashlight_off);
-			//PlaySound(turnOffSound); // Only play "off" sound
+			TurnOffFlashlight();
 		}
+	}
+
+	private void TurnOnFlashlight()
+	{
+		isFlashlightOn = true;
+		if (flashlight != null)
+			flashlight.enabled = true;
+		if (flashlightSprite != null)
+			flashlightSprite.enabled = true;
+		//sound_manager.play_sound(soundType.flashlight_on);
+		//PlaySound(turnOnSound); // Only play "on" sound
+	}
+
+	private void TurnOffFlashlight()
+	{
+		isFlashlightOn = false;
+		if (flashlight != null)
+			flashlight.enabled = false;
+		if (flashlightSprite != null)
+			flashlightSprite.enabled = false;
+		
+		//sound_manager.play_sound(soundType.flashlight_off);
+		//PlaySound(turnOffSound); // Only play "off" sound
 	}
 
 	// Helper to play any sound safely

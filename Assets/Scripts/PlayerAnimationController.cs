@@ -23,6 +23,9 @@ public class PlayerAnimationController : MonoBehaviour
 	private bool hasFlashlight = false;
 	private bool wasGrounded = true;
 	private bool jumpAnimationComplete = false;
+	
+	// Pause state tracking
+	private float animatorSpeedBeforePause = 1f;
     
 	void Awake()
 	{
@@ -39,6 +42,25 @@ public class PlayerAnimationController : MonoBehaviour
     
 	void Update()
 	{
+		// Handle pause state for animations
+		if (PauseController.isGamePaused)
+		{
+			if (animator.speed != 0f)
+			{
+				animatorSpeedBeforePause = animator.speed;
+				animator.speed = 0f;
+			}
+			return;
+		}
+		else
+		{
+			// Resume animation if coming out of pause
+			if (animator.speed == 0f && !jumpAnimationComplete)
+			{
+				animator.speed = animatorSpeedBeforePause;
+			}
+		}
+		
 		UpdateAnimation();
 	}
     
@@ -83,6 +105,7 @@ public class PlayerAnimationController : MonoBehaviour
 			{
 				jumpAnimationComplete = true;
 				// Pause the animator to hold on last frame
+				animatorSpeedBeforePause = animator.speed;
 				animator.speed = 0f;
 			}
 		}
